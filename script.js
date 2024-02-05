@@ -48,6 +48,13 @@
         delay: 0.7, 
         ease: "power1.out"
     });
+    gsap.from(".modes", {
+        opacity: 0,
+        y: 20,
+        duration: 1,
+        delay: 0.7, 
+        ease: "power1.out"
+    });
     gsap.from("#content1", {
         opacity: 0,
         y: 20,
@@ -84,3 +91,5 @@
     localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
     });
     });
+
+  
