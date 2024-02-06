@@ -69,6 +69,7 @@
         ease: "back.out(1.7)",
         delay: 0.5
     });
+    
     document.addEventListener("DOMContentLoaded", function() {
     var isDarkMode = localStorage.getItem("darkMode");
 
@@ -91,5 +92,17 @@
     localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
     });
     });
+    
+    // function handleRightClick(event) {
+    //     event.preventDefault();
+    //     alert("Owps!👋");
+    // }
+    // document.addEventListener("contextmenu", handleRightClick);
 
-  
+    // function handleKeyboardShortcut(event) {
+    //     if ((event.ctrlKey && event.shiftKey && event.key === "I") || event.key === "F12") {
+    //         alert("Owps!👋");
+    //         event.preventDefault();
+    //     }
+    // }
+    // document.addEventListener("keydown", handleKeyboardShortcut);
