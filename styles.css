@@ -1,11 +1,12 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Overused Grotesk', sans-serif;
     /* background-color:  #f1f1f1; */
     /* background-color: #222; */
     /* overflow-y: hidden; */
     overflow-x: hidden;
     transition: background-color 0.5s ease;
 }
+
 .dark-mode {
     background-color: #222;
     color: #fff;
@@ -14,7 +15,8 @@ body.dark-mode a,
 body.dark-mode nav,
 body.dark-mode p,
 body.dark-mode h2,
-body.dark-mode .text-field {
+body.dark-mode .text-field,
+body.dark-mode .github {
     color: #dde5ec;
 }
 body.dark-mode .dark-name:hover{

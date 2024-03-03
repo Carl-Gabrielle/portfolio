@@ -69,7 +69,59 @@
         ease: "back.out(1.7)",
         delay: 0.5
     });
-    
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from("#tech-stack", {
+        scrollTrigger: {
+            trigger: "#tech-stack",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        ease: "power2.out" 
+    });
+
+ 
+
+    gsap.from("#front", {
+        scrollTrigger: {
+            trigger: "#front",
+            start: "top 80%", 
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2, 
+        ease: "power2.out" 
+    });
+    gsap.from("#back", {
+        scrollTrigger: {
+            trigger: "#back",
+            start: "top 80%", 
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2, 
+        ease: "power2.out" 
+    });
+    gsap.from("#tools", {
+        scrollTrigger: {
+            trigger: "#tools",
+            start: "top 80%", 
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2, 
+        ease: "power2.out" 
+    });
     document.addEventListener("DOMContentLoaded", function() {
     var isDarkMode = localStorage.getItem("darkMode");
 
@@ -93,16 +145,18 @@
     });
     });
     
-    // function handleRightClick(event) {
-    //     event.preventDefault();
-    //     alert("Owps!👋");
-    // }
-    // document.addEventListener("contextmenu", handleRightClick);
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll('.nav-link');
 
-    // function handleKeyboardShortcut(event) {
-    //     if ((event.ctrlKey && event.shiftKey && event.key === "I") || event.key === "F12") {
-    //         alert("Owps!👋");
-    //         event.preventDefault();
-    //     }
-    // }
-    // document.addEventListener("keydown", handleKeyboardShortcut);
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const arrowIcons = document.querySelectorAll('.arrow-icon');
+                arrowIcons.forEach(function(icon) {
+                    icon.style.display = 'none';
+                });
+                const arrowIcon = this.querySelector('.arrow-icon');
+                arrowIcon.style.display = 'inline';
+            });
+        });
+    });

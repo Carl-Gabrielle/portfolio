@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carl Gabrielle is a 21-year-old , currently a third year  Information Technology Student">
+    <meta name="keywords" content="Carl Gabrielle Aspiring Web Developer">
+    <meta name="author" content="Carl Gabrielle">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-ZvxUjRaCv0n6m/y3Pqs83MWjyZ4CBNtf6n5vt4Qj9eBPK8zi5tHtGo4g2D0Ofqfg8sPT8GOvhkzQaE5eb2pWIdg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <title>Carl Gabrielle | Aspiring Web Developer</title>
+</head>
+<style>
+    body{
+        background-color: #f1f1f1;
+        font-family: 'Avenir Next', sans-serif;
+    }
+    .container{
+        background-color: #ffffff;
+    }
+    .scrolling::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrolling::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.scrolling::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.scrolling::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+</style>
+<body>
+    <main  class="flex justify-between h-screen overflow-hidden">
+            <div class="left-0 h-screen w-72 relative container  overflow-y-auto hidden lg:block">
+                <!-- <div class="container opacity-30 h-full"></div> -->
+                <div class="absolute top-11 text-2xl text-gray-700 right-8 transform -translate-y-1/2">
+                    <i class="fas fa-bars cursor-pointer"></i>
+                </div>
+
+                <div class="absolute top-20 inset-x-0 flex items-center justify-center">
+                    <img class="z-10 w-16 h-16 rounded-full object-cover shadow-lg" src="images/profile.jpg" alt="Profile Picture" id="profilePic"/>
+                    <div class="relative pl-4">
+                        <p class="z-10 text-gray-800 text-l font-semibold tracking-wide mb-1">Carl Gabrielle</p>
+                        <ul class="z-10 mt-1">
+                            <li class="bg-green-500 px-6 py-1 text-white  text-center rounded-full mb-1">Patient</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <!-- <div class="absolute top-48 inset-x-0 flex flex-col items-center justify-center">
+                    <p class="z-10 text-gray-800 text-xl font-semibold tracking-wide mb-2">Carl Gabrielle</p>
+                    <p class="text-gray-600 text-sm font-medium">orfinadacarlgabrielle@gmail.com</p>
+                </div> -->
+            </div>
+            <div class="scrolling w-full lg:w-1/2 overflow-y-auto inset-0  z-0 flex flex-col items-center justify-start bg-gray-300 mt-2 mb-2 rounded-none sm:rounded-3xl pt-10 pb-10 ">
+                <div class="w-1/2 opacity-100"></div>
+                <div class="max-w-md w-full bg-white rounded-3xl shadow-lg mt-5 px-6 py-12">
+                    <!-- Middle content -->
+                    <h2 class="text-3xl text-gray-800 font-semibold">Welcome</h2>
+                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis tortor nec ipsum mollis, nec egestas urna convallis. Nulla facilisi.</p>
+                    <button class="mt-8 w-full bg-blue-500 text-white py-2 px-4 rounded-full font-semibold">Get Started</button>
+                </div>
+                <div class="max-w-md w-full bg-white rounded-3xl shadow-lg mt-5 px-6 py-12">
+                    <!-- Middle content -->
+                    <h2 class="text-3xl text-gray-800 font-semibold">Welcome</h2>
+                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis tortor nec ipsum mollis, nec egestas urna convallis. Nulla facilisi.</p>
+                    <button class="mt-8 w-full bg-blue-500 text-white py-2 px-4 rounded-full font-semibold">Get Started</button>
+                </div>
+                <div class="max-w-md w-full bg-white rounded-3xl shadow-lg mt-5 px-6 py-12">
+                    <!-- Middle content -->
+                    <h2 class="text-3xl text-gray-800 font-semibold">Welcome</h2>
+                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis tortor nec ipsum mollis, nec egestas urna convallis. Nulla facilisi.</p>
+                    <button class="mt-8 w-full bg-blue-500 text-white py-2 px-4 rounded-full font-semibold">Get Started</button>
+                </div>
+                <div class="max-w-md w-full bg-white rounded-3xl shadow-lg mt-5 px-6 py-12">
+                    <!-- Middle content -->
+                    <h2 class="text-3xl text-gray-800 font-semibold">Welcome</h2>
+                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis tortor nec ipsum mollis, nec egestas urna convallis. Nulla facilisi.</p>
+                    <button class="mt-8 w-full bg-blue-500 text-white py-2 px-4 rounded-full font-semibold">Get Started</button>
+                </div>
+            </div>
+            <div class="right-0 h-screen w-72 relative container overflow-y-auto hidden lg:block  ">
+                <!-- <div class="container opacity-30 h-full"></div> -->
+                <div class="absolute top-11 text-2xl text-gray-700 left-8 transform -translate-y-1/2">
+                    <i class="fas fa-bars cursor-pointer"></i>
+                </div>
+                <div class="absolute top-20 inset-x-0 flex items-center justify-center">
+                    <img class="z-10 w-24 h-24 rounded-full object-cover shadow-lg" src="images/profile.jpg" alt="Profile Picture" id="profilePic"/>
+                </div>
+                <div class="absolute top-48 inset-x-0 flex flex-col items-center justify-center">
+                    <p class="z-10 text-gray-800 text-xl font-semibold tracking-wide mb-2">Carl Gabrielle</p>
+                    <p class="text-gray-600 text-sm font-medium">orfinadacarlgabrielle@gmail.com</p>
+                </div>
+            </div>
+    </main>
+    
+</body>
