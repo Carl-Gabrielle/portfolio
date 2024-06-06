@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+    
     gsap.registerPlugin(); 
     let text = new SplitType("#text");
     let characters = document.querySelectorAll('.char');
@@ -83,9 +85,118 @@
         duration: 1,
         ease: "power2.out" 
     });
+    gsap.from("#projectTitle", {
+        scrollTrigger: {
+            trigger: "#projectTitle",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+        opacity: 1,
+        y: 40,
+        duration: 1,
+        ease: "power2.out" 
+    });
+    
+    gsap.to("#projectText", {
+        scrollTrigger: {
+          trigger: ".project-container",
+          start: "top 50%",
+          end: "bottom   ",
+          scrub: true,
 
- 
+        },
+        x: function() {
+          return window.innerWidth < 768 ? "-100%" : "100%";
+        },
+        y: function() {
+          return window.innerWidth < 768 ? "10%" : "90%";
+        },
+        opacity: function() {
+          return window.innerWidth < 768 ? 1 : 1;
+        },
+        duration: 1
+      });
 
+
+    gsap.from("#proj1", {
+        scrollTrigger: {
+            trigger: "#proj1",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: -40,
+        duration: 2,
+        ease: "power2.out" 
+    });
+    gsap.from("#bring", {
+        scrollTrigger: {
+            trigger: "#bring",
+            start: "top 30%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: -40,
+        duration: 2,
+        ease: "power2.out" 
+    });
+    gsap.from("#proj2", {
+        scrollTrigger: {
+            trigger: "#proj2",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: 40,
+        duration: 2,
+        ease: "power2.out" 
+    });
+    gsap.from("#contactDiv", {
+        scrollTrigger: {
+            trigger: "#contactDiv",
+            start: "top 30%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: 40,
+        duration: 2,
+        ease: "power2.out" 
+    });
+    gsap.from("#proj3", {
+        scrollTrigger: {
+            trigger: "#proj3",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: -40,
+        duration: 2,
+        ease: "power2.out" 
+    });
+    gsap.from("#proj4", {
+        scrollTrigger: {
+            trigger: "#proj4",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: 40,
+        duration: 2,
+        ease: "power2.out" 
+    });
+    gsap.from("#btnView", {
+        scrollTrigger: {
+            trigger: "#btnView",
+            start: "top 90%", 
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: -20,
+        duration: 1,
+        delay: 0.5,
+        ease: "power1.out" 
+    });
+    
     gsap.from("#front", {
         scrollTrigger: {
             trigger: "#front",

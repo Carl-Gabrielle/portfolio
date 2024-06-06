@@ -6,7 +6,9 @@ body {
     overflow-x: hidden;
     transition: background-color 0.5s ease;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .dark-mode {
     background-color: #222;
     color: #fff;
@@ -15,10 +17,14 @@ body.dark-mode a,
 body.dark-mode nav,
 body.dark-mode p,
 body.dark-mode h2,
+body.dark-mode h1,
 body.dark-mode .text-field,
-body.dark-mode .github {
+body.dark-mode .github,
+body.dark-mode #projectText,
+body.dark-mode .fa-arrow-down {
     color: #dde5ec;
 }
+
 body.dark-mode .dark-name:hover{
     background-color: #2e2e2e;
 }
@@ -44,4 +50,28 @@ border-radius: 3px;
 
 body::-webkit-scrollbar-thumb:hover {
 background: #555; 
+}
+#projectText{
+    -webkit-text-stroke: 4px; 
+    -webkit-text-fill-color: transparent;
+}
+#projectText{
+    transition:cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+/* .container-nav{
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(6px);
+} */
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+.underline-thick {
+    text-decoration-thickness: 2px; 
+}
+.small-text {
+    font-size: 0.6rem;
 }
