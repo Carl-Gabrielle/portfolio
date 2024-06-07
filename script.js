@@ -274,7 +274,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
     $(document).ready(function() {
-        $('#mobile-Div').hide();
         $('#menu-Bar').click(function() {
             $('#mobile-Div').fadeToggle(300);
         });
