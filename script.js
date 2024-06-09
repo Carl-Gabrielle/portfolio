@@ -209,6 +209,17 @@ gsap.registerPlugin(ScrollTrigger);
         stagger: 0.2, 
         ease: "power2.out" 
     });
+    gsap.from("#frontTools", {
+        scrollTrigger: {
+            trigger: "#frontTools",
+            start: "top 90%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: -40,
+        duration: 2,
+        ease: "power2.out" 
+    });
     gsap.from("#back", {
         scrollTrigger: {
             trigger: "#back",
@@ -221,6 +232,17 @@ gsap.registerPlugin(ScrollTrigger);
         stagger: 0.2, 
         ease: "power2.out" 
     });
+    gsap.from("#backTools", {
+        scrollTrigger: {
+            trigger: "#backTools",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: 40,
+        duration: 2,
+        ease: "power2.out" 
+    });
     gsap.from("#tools", {
         scrollTrigger: {
             trigger: "#tools",
@@ -231,6 +253,17 @@ gsap.registerPlugin(ScrollTrigger);
         y: 50,
         duration: 1,
         stagger: 0.2, 
+        ease: "power2.out" 
+    });
+    gsap.from("#platTools", {
+        scrollTrigger: {
+            trigger: "#platTools",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+        opacity: 0,
+        x: -40,
+        duration: 2,
         ease: "power2.out" 
     });
     document.addEventListener("DOMContentLoaded", function() {
@@ -272,10 +305,35 @@ gsap.registerPlugin(ScrollTrigger);
         });
     });
 
-
     $(document).ready(function() {
-        $('#menu-Bar').click(function() {
-            $('#mobile-Div').fadeToggle(300);
+        const mobileMenu = $('#mobile-Div');
+        const overlay = $('#overlay');
+        const menuBar = $('#menu-Bar');
+    
+        menuBar.click(function(event) {
+            event.stopPropagation(); 
+            mobileMenu.fadeToggle(300);
+            overlay.fadeToggle(300); 
+        });
+    
+        $(document).click(function(event) {
+            if (!$(event.target).closest('#menu-Bar').length && !$(event.target).closest('#mobile-Div').length) {
+                mobileMenu.fadeOut(300);
+                overlay.fadeOut(300); 
+            }
+        });
+        
+        overlay.click(function() {
+            mobileMenu.fadeOut(300);
+            overlay.fadeOut(300);
+        });
+    
+        $(window).resize(function() {
+            if ($(window).width() >= 768) {
+                mobileMenu.fadeOut(300);
+                overlay.fadeOut(300);
+            }
         });
     });
+    
     

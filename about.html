@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
-    <title>Carl Gabrielle | Aspiring Web Developer</title>
+    <title>Carl Gabrielle Portfolio</title>
 </head>
 <style>
     body{
@@ -42,69 +42,124 @@
 
 </style>
 <body>
-    <main  class="flex justify-between h-screen overflow-hidden">
-            <div class="left-0 h-screen w-72 relative container  overflow-y-auto hidden lg:block">
-                <!-- <div class="container opacity-30 h-full"></div> -->
-                <div class="absolute top-11 text-2xl text-gray-700 right-8 transform -translate-y-1/2">
-                    <i class="fas fa-bars cursor-pointer"></i>
-                </div>
-
-                <div class="absolute top-20 inset-x-0 flex items-center justify-center">
-                    <img class="z-10 w-16 h-16 rounded-full object-cover shadow-lg" src="images/profile.jpg" alt="Profile Picture" id="profilePic"/>
-                    <div class="relative pl-4">
-                        <p class="z-10 text-gray-800 text-l font-semibold tracking-wide mb-1">Carl Gabrielle</p>
-                        <ul class="z-10 mt-1">
-                            <li class="bg-green-500 px-6 py-1 text-white  text-center rounded-full mb-1">Patient</li>
-                        </ul>
+    <div class=" w-full bg-white  container-dark h-20   fixed z-30 border-b">
+        <div class="flex justify-between items-center h-full max-w-6xl px-6 mx-auto">
+            <a href="index.html">
+                <p class="font-semibold font-montserrat text-xs tracking-wide rounded-md text-white bg-black px-5 py-1" id="name">
+                    Carl Gabrielle <br>
+                    <span class="small-text">Aspiring Web Developer</span>
+                </p>
+            </a>
+            <nav id="navs" class="hidden md:block">
+                <ul class="flex space-x-8 text-gray-700 font-normal text-sm ">
+                    <li> 
+                        <a href="#" class="underline-thick flex  justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500">
+                    <div class="flex flex-col items-center">
+                        <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.848 2.752a1.2 1.2 0 0 0-1.696 0l-8.4 8.4a1.2 1.2 0 0 0 1.696 1.696l.352-.351V20.4A1.2 1.2 0 0 0 6 21.6h2.4a1.2 1.2 0 0 0 1.2-1.2V18a1.2 1.2 0 0 1 1.2-1.2h2.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 0 1.2 1.2H18a1.2 1.2 0 0 0 1.2-1.2v-7.903l.352.351a1.2 1.2 0 0 0 1.696-1.696l-8.4-8.4Z"></path>
+                        </svg>
+                            Home
                     </div>
+                            <i class="fas fa-arrow-down text-sm arrow-icon text-gray-900" style="display: none;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="  underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4  hover:text-gray-500">
+                            <div class="flex flex-col items-center">
+                                <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M12 10.8a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2ZM3.6 21.6a8.4 8.4 0 0 1 16.8 0H3.6Z" clip-rule="evenodd"></path>
+                                </svg>
+                                About
+                            </div>
+                            <i class="fas fa-arrow-down text-sm arrow-icon text-gray-900" style="display: none;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500">
+                            <div class="flex flex-col items-center">
+                                <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M7.2 7.2V6a3.6 3.6 0 0 1 3.6-3.6h2.4A3.6 3.6 0 0 1 16.8 6v1.2h2.4a2.4 2.4 0 0 1 2.4 2.4v4.284A27.542 27.542 0 0 1 12 15.6a27.542 27.542 0 0 1-9.6-1.716V9.6a2.4 2.4 0 0 1 2.4-2.4h2.4ZM9.6 6a1.2 1.2 0 0 1 1.2-1.2h2.4A1.2 1.2 0 0 1 14.4 6v1.2H9.6V6Zm1.2 6a1.2 1.2 0 0 1 1.2-1.2h.012a1.2 1.2 0 1 1 0 2.4H12a1.2 1.2 0 0 1-1.2-1.2Z" clip-rule="evenodd"></path>
+                                    <path d="M2.4 16.43v2.77a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4v-2.77A29.97 29.97 0 0 1 12 18c-3.355 0-6.584-.552-9.6-1.57Z"></path>
+                                </svg>
+                                Projects
+                            </div>
+                            <i class="fas  fa-arrow-down text-sm arrow-icon text-gray-800" style="display: none;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class=" underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500">
+                            <div class="flex flex-col items-center ">
+                                <svg  class="icon-nav" width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.404 7.06 12 11.859l9.596-4.797A2.4 2.4 0 0 0 19.2 4.8H4.8a2.4 2.4 0 0 0-2.396 2.26Z"></path>
+                                    <path d="m21.6 9.742-9.6 4.8-9.6-4.8V16.8a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4V9.742Z"></path>
+                                </svg>
+                                Contact
+                            </div>
+                            <i class="fas fa-arrow-down text-sm arrow-icon text-gray-900" style="display: none;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        <div class="flex items-center gap-4">
+        <a class="hidden md:block   modes text-gray-500  hover:text-gray-600"  href="https://www.linkedin.com/in/carl-gabrielle-61665424a/"  target="_blank"><p>@carlgabrielle</p></a>
+            <button id="toggleIcon" class="toggle-icon modes text-yellow-400">
+                <i id="icon" class="fa fa-moon"></i>
+            </button>
+            <svg id="menu-Bar" class="block sm:hidden cursor-pointer" width="24" height="24" fill="none" stroke="#6b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 18h16M4 6h16H4Zm0 6h16H4Z"></path>
+            </svg>
+        </div>
+        </div>
+        <div class="z-10" id="overlay"></div>
+        <div id="mobile-Div"  class="hidden">
+        <div class="block sm:hidden flex justify-end  max-w-6xl mx-auto px-6">
+            <div class="z-30  bg-white rounded-md shadow-md border w-64 h-72 mt-3">
+                <div class="p-4">
+                    <ul class="flex flex-col  space-y-4  font-normal">
+                        <li class="flex space-x-3 items-center ">
+                            <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.848 2.752a1.2 1.2 0 0 0-1.696 0l-8.4 8.4a1.2 1.2 0 0 0 1.696 1.696l.352-.351V20.4A1.2 1.2 0 0 0 6 21.6h2.4a1.2 1.2 0 0 0 1.2-1.2V18a1.2 1.2 0 0 1 1.2-1.2h2.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 0 1.2 1.2H18a1.2 1.2 0 0 0 1.2-1.2v-7.903l.352.351a1.2 1.2 0 0 0 1.696-1.696l-8.4-8.4Z"></path>
+                            </svg>
+                            <a class="nav-mobile" href="">Home</a>
+                        </li>
+                        <li class="flex space-x-3 items-center">
+                            <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M12 10.8a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2ZM3.6 21.6a8.4 8.4 0 0 1 16.8 0H3.6Z" clip-rule="evenodd"></path>
+                            </svg>
+                            <a class="nav-mobile" href="">About Me</a>
+                        </li>
+                        <hr class="border ">
+                        <li class="flex space-x-3 items-center">
+                            <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.2 7.2V6a3.6 3.6 0 0 1 3.6-3.6h2.4A3.6 3.6 0 0 1 16.8 6v1.2h2.4a2.4 2.4 0 0 1 2.4 2.4v4.284A27.542 27.542 0 0 1 12 15.6a27.542 27.542 0 0 1-9.6-1.716V9.6a2.4 2.4 0 0 1 2.4-2.4h2.4ZM9.6 6a1.2 1.2 0 0 1 1.2-1.2h2.4A1.2 1.2 0 0 1 14.4 6v1.2H9.6V6Zm1.2 6a1.2 1.2 0 0 1 1.2-1.2h.012a1.2 1.2 0 1 1 0 2.4H12a1.2 1.2 0 0 1-1.2-1.2Z" clip-rule="evenodd"></path>
+                                <path d="M2.4 16.43v2.77a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4v-2.77A29.97 29.97 0 0 1 12 18c-3.355 0-6.584-.552-9.6-1.57Z"></path>
+                            </svg>
+                            <a class="nav-mobile" href="">Projects</a>
+                        </li>
+                        <li class="flex space-x-3 items-center">
+                            <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.404 7.06 12 11.859l9.596-4.797A2.4 2.4 0 0 0 19.2 4.8H4.8a2.4 2.4 0 0 0-2.396 2.26Z"></path>
+                                <path d="m21.6 9.742-9.6 4.8-9.6-4.8V16.8a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4V9.742Z"></path>
+                            </svg>
+                            <a class="nav-mobile" href="">Contact</a>
+                        </li>
+                        <li class="flex space-x-3 items-center ">
+                            <svg width="22" height="22" fill="none" stroke="#6b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.828 10.172a4 4 0 0 0-5.656 0l-4 4a4 4 0 1 0 5.656 5.656l1.102-1.1"></path>
+                                <path d="M10.172 13.828a4 4 0 0 0 5.656 0l4-4a4 4 0 0 0-5.656-5.656l-1.1 1.1"></path>
+                            </svg>
+                            <a  class="nav-mobile text-gray-500  hover:text-gray-600 "  href="https://www.linkedin.com/in/carl-gabrielle-61665424a/" target="_blank"> @carlgabrielle</a>
+                        </li>
+                        <hr class="border  ">
+                        <li class="flex space-x-3 text-gray-500 items-center text-xs justify-between">
+                            <span>Carl Gabrielle</span>
+                            <span>&copy; 2024 Portfolio</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                
-                <!-- <div class="absolute top-48 inset-x-0 flex flex-col items-center justify-center">
-                    <p class="z-10 text-gray-800 text-xl font-semibold tracking-wide mb-2">Carl Gabrielle</p>
-                    <p class="text-gray-600 text-sm font-medium">orfinadacarlgabrielle@gmail.com</p>
-                </div> -->
             </div>
-            <div class="scrolling w-full lg:w-1/2 overflow-y-auto inset-0  z-0 flex flex-col items-center justify-start bg-gray-300 mt-2 mb-2 rounded-none sm:rounded-3xl pt-10 pb-10 ">
-                <div class="w-1/2 opacity-100"></div>
-                <div class="max-w-md w-full bg-white rounded-3xl shadow-lg mt-5 px-6 py-12">
-                    <!-- Middle content -->
-                    <h2 class="text-3xl text-gray-800 font-semibold">Welcome</h2>
-                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis tortor nec ipsum mollis, nec egestas urna convallis. Nulla facilisi.</p>
-                    <button class="mt-8 w-full bg-blue-500 text-white py-2 px-4 rounded-full font-semibold">Get Started</button>
-                </div>
-                <div class="max-w-md w-full bg-white rounded-3xl shadow-lg mt-5 px-6 py-12">
-                    <!-- Middle content -->
-                    <h2 class="text-3xl text-gray-800 font-semibold">Welcome</h2>
-                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis tortor nec ipsum mollis, nec egestas urna convallis. Nulla facilisi.</p>
-                    <button class="mt-8 w-full bg-blue-500 text-white py-2 px-4 rounded-full font-semibold">Get Started</button>
-                </div>
-                <div class="max-w-md w-full bg-white rounded-3xl shadow-lg mt-5 px-6 py-12">
-                    <!-- Middle content -->
-                    <h2 class="text-3xl text-gray-800 font-semibold">Welcome</h2>
-                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis tortor nec ipsum mollis, nec egestas urna convallis. Nulla facilisi.</p>
-                    <button class="mt-8 w-full bg-blue-500 text-white py-2 px-4 rounded-full font-semibold">Get Started</button>
-                </div>
-                <div class="max-w-md w-full bg-white rounded-3xl shadow-lg mt-5 px-6 py-12">
-                    <!-- Middle content -->
-                    <h2 class="text-3xl text-gray-800 font-semibold">Welcome</h2>
-                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis tortor nec ipsum mollis, nec egestas urna convallis. Nulla facilisi.</p>
-                    <button class="mt-8 w-full bg-blue-500 text-white py-2 px-4 rounded-full font-semibold">Get Started</button>
-                </div>
-            </div>
-            <div class="right-0 h-screen w-72 relative container overflow-y-auto hidden lg:block  ">
-                <!-- <div class="container opacity-30 h-full"></div> -->
-                <div class="absolute top-11 text-2xl text-gray-700 left-8 transform -translate-y-1/2">
-                    <i class="fas fa-bars cursor-pointer"></i>
-                </div>
-                <div class="absolute top-20 inset-x-0 flex items-center justify-center">
-                    <img class="z-10 w-24 h-24 rounded-full object-cover shadow-lg" src="images/profile.jpg" alt="Profile Picture" id="profilePic"/>
-                </div>
-                <div class="absolute top-48 inset-x-0 flex flex-col items-center justify-center">
-                    <p class="z-10 text-gray-800 text-xl font-semibold tracking-wide mb-2">Carl Gabrielle</p>
-                    <p class="text-gray-600 text-sm font-medium">orfinadacarlgabrielle@gmail.com</p>
-                </div>
-            </div>
-    </main>
+        </div>
+    </div>
+    </div>
     
 </body>

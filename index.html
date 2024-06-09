@@ -16,7 +16,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
         <!-- <link rel="icon" type="image/jpeg" href="images/profile.jpg"> -->
         <link rel="stylesheet" href="styles.css">
-        <title>Carl Gabrielle | Aspiring Web Developer</title>
+        <title>Carl Gabrielle Portfolio</title>
     </head>
     <body class="lg:overflow-show overflow-y-scroll">
         <div class=" w-full bg-white  container-dark h-20   fixed z-30 border-b">
@@ -28,7 +28,7 @@
                     </p>
                 </a>
                 <nav id="navs" class="hidden md:block">
-                    <ul class="flex space-x-8 text-gray-700 font-normal ">
+                    <ul class="flex space-x-8 text-gray-700 font-normal text-sm ">
                         <li> 
                             <a href="#" class="underline-thick flex  justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500">
                         <div class="flex flex-col items-center">
@@ -41,7 +41,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="  underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4  hover:text-gray-500">
+                            <a href="" class="  underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4  hover:text-gray-500">
                                 <div class="flex flex-col items-center">
                                     <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M12 10.8a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2ZM3.6 21.6a8.4 8.4 0 0 1 16.8 0H3.6Z" clip-rule="evenodd"></path>
@@ -84,9 +84,10 @@
                 </button>
                 <svg id="menu-Bar" class="block sm:hidden cursor-pointer" width="24" height="24" fill="none" stroke="#6b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 18h16M4 6h16H4Zm0 6h16H4Z"></path>
-                 </svg>
+                </svg>
             </div>
             </div>
+            <div class="z-10" id="overlay"></div>
             <div id="mobile-Div"  class="hidden">
             <div class="block sm:hidden flex justify-end  max-w-6xl mx-auto px-6">
                 <div class="z-30  bg-white rounded-md shadow-md border w-64 h-72 mt-3">
@@ -129,7 +130,7 @@
                             <hr class="border  ">
                             <li class="flex space-x-3 text-gray-500 items-center text-xs justify-between">
                                 <span>Carl Gabrielle</span>
-                                <span>@Folio 2024</span>
+                                <span>&copy; 2024 Portfolio</span>
                             </li>
                         </ul>
                     </div>
@@ -169,11 +170,10 @@
             -->
         </div>
     </div>
-        <div class=" w-full h-full container-dark  rounded-t-3xl bg-gray-100 mt-10 ">
+        <div class=" w-full h-full container-dark   bg-gray-100 mt-10 ">
             <div class="px-6 max-w-6xl mx-auto pt-1 md:pt-1 bg-Proj" style="background-image: url('images/project_bg.png'); background-size: 90%; background-position: center; background-repeat: no-repeat;">
-                <div id="projectTitle" class="flex gap-4">
-                    <hr class=" border-gray-800 border-2  w-32 hidden md:block">
-                    <h1  class="font-extrabold text-5xl md:text-7xl md:text-center items-center text-center tracking-widest uppercase leading-none text-gray-800 md:-mt-10 mt-10">Recent Projects</h1>
+                <div id="projectTitle">
+                    <h1  class="font-extrabold  text-5xl md:text-7xl md:text-center items-center text-center tracking-widest uppercase leading-none text-gray-800 md:-mt-10 mt-10">Recent Projects</h1>
                 </div>
                 <div class="relative h-full w-full project-container hidden md:block   ">
                     <h1 id="projectText" class="absolute    text-black font-extrabold tracking-wider" > Projects</h1>
@@ -197,8 +197,9 @@
                 </a>
                 <a href="">
                     <div id="proj2" class="divProj relative z-20  w-full h-72  bg-white rounded-tl-3xl rounded-br-3xl">
+                        <div class="absolute w-full h-full  transition-transform duration-1000 ease-in-out hover:scale-110" style="background-image: url('images/task-image.png'); background-size: 75%; background-position: center; background-repeat: no-repeat;"></div>
                         <div class="absolute top-0 right-0   flex justify-center pb-4">
-                            <p class="bg-black px-6  text-white  py-1 font-extrabold">DevTools</p>
+                            <p class="bg-black px-6  text-white  py-1 font-extrabold">Task Management System</p>
                         </div>
                         <div class="absolute bottom-0 right-0  px-10 flex justify-center pb-4">
                             <span class="text-black text-2xl font-extrabold">02</span>
@@ -207,9 +208,8 @@
                 </a>
                 <a href="">
                     <div id="proj3" class="divProj relative z-20  w-full h-72 bg-white mb-10 rounded-tl-3xl rounded-br-3xl">
-                        <div class="absolute w-full h-full  transition-transform duration-1000 ease-in-out hover:scale-110" style="background-image: url('images/task-image.png'); background-size: 75%; background-position: center; background-repeat: no-repeat;"></div>
                         <div class="absolute top-0 right-0   flex justify-center pb-4">
-                            <p class="bg-black px-6  text-white  py-1 font-extrabold">Task Management System</p>
+                            <p class="bg-black px-6  text-white  py-1 font-extrabold">DevTools</p>
                         </div>
                         <!-- <div class="absolute bottom-0  left-0  px-10 flex justify-center pb-3 ">
                             <ul class="flex gap-4  ">
@@ -218,7 +218,7 @@
                             </ul>
                         </div> -->
                         <div class="absolute bottom-0 right-0  px-10 flex justify-center pb-4">
-                            <sapan class="text-black text-2xl font-extrabold">03</span>
+                            <span class="text-black text-2xl font-extrabold">03</span>
                         </div>
                     </div>
                 </a>
@@ -239,7 +239,7 @@
         </div>
         </div>
         
-        <div class="w-full h-full ">
+        <div class="w-full h-full   ">
             <div class="px-6  max-w-6xl  mx-auto pt-1 md:pt-1 ">
             <div id="tech-stack" class="text-center md:text-center">
                 <h2  class="flex justify-center items-center mt-24  hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide  hover:underline ">Tech Stack</h2>
@@ -251,50 +251,51 @@
                     <li class="ml-2  text-white font-normal" >Frontend Development</li>
                 </ul>
             </div>
-            <div class="flex flex-col sm:grid sm:grid-cols-3 sm:gap-2 justify-center md:justify-start">
+            <div id="frontTools" class="flex flex-col sm:grid sm:grid-cols-3 sm:gap-2 justify-center md:justify-start">
                 <ul class="flex gap-2 flex-wrap justify-center md:justify-start sm:col-span-3">
-                    <li class="shadow-md hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                        <div class="flex flex-col justify-center p-2 px-5 items-center">
-                            <img src="./logo/htmlLogo.png" class="w-10" alt="">
-                            <p class="text-center text-gray-600 font-semibold pt-2">HTML</p>
+                    <li class="shadow-md     border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                        <div class="flex flex-row items-center">
+                            <img src="./logo/htmlLogo.png" class="w-8 h-8 mr-2" alt="HTML Logo">
+                            <p class="text-slate-900 font-medium text-xs">HTML5</p>
                         </div>
                     </li>
-                    <li class="shadow-md hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                        <div class="flex flex-col justify-center p-2 px-5 items-center">
-                            <img src="./logo/cssLogo.png" class="w-10" alt="">
-                            <p class="text-center text-gray-600 font-semibold pt-2">CSS</p>
+                    
+                    <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                        <div class="flex flex-row items-center">
+                            <img src=" ./logo/cssLogo.png" class="w-8 h-8 mr-2" alt="CSS Logo">
+                            <p class="text-slate-900 font-medium text-xs">CSS</p>
                         </div>
                     </li>
-                    <li class="shadow-md hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                        <div class="flex flex-col justify-center p-2 px-5 items-center">
-                            <img src="./logo/jsLogo.png" class="w-10" alt="">
-                            <p class="text-center text-gray-600 font-semibold pt-2">JS</p>
+                    <li class="shadow-md    border border-gray-300 rounded-lg px-2 w-32 m-3 h-16 flex justify-center items-center ">
+                        <div class="flex flex-row items-center">
+                            <img src=" ./logo/jsLogo.png" class="w-8 h-8 mr-2" alt="JS Logo">
+                            <p class="text-slate-900 font-medium text-xs">Javascript</p>
+                        </div>
+                    </li>
+                    <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                        <div class="flex flex-row items-center">
+                            <img src=" ./logo/bootstrapLogo.png" class="w-8 h-8 mr-2" alt="Bootstrap Logo">
+                            <p class="text-slate-900 font-medium text-xs">Bootstrap</p>
                         </div>
                     </li>
                 </ul>
                 <ul class="flex gap-2 flex-wrap justify-center md:justify-start sm:col-span-3">
-                    <li class="shadow-md hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                        <div class="flex flex-col justify-center p-2 px-5 items-center">
-                            <img src="./logo/bootstrapLogo.png" class="w-10" alt="">
-                            <p class="text-center text-gray-600 font-semibold pt-2">Bootstrap</p>
+                    <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                        <div class="flex flex-row items-center">
+                            <img src="./logo/tailwindLogo.png" class="w-8 h-8 mr-2" alt="TailwindCss Logo">
+                            <p class="text-slate-900 font-medium text-xs">Tailwind</p>
                         </div>
                     </li>
-                    <li class="shadow-md hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                        <div class="flex flex-col justify-center p-2 px-5 items-center">
-                            <img src="./logo/tailwindLogo.png" class="w-10" alt="">
-                            <p class="text-center text-gray-600 font-semibold pt-2">Tailwind</p>
+                    <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                        <div class="flex flex-row items-center">
+                            <img src="./logo/jqueryLogo.png" class="w-8 h-8 mr-2" alt="JqueryLogo">
+                            <p class="text-slate-900 font-medium text-xs">Jquery</p>
                         </div>
                     </li>
-                    <li class="shadow-md hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                        <div class="flex flex-col justify-center p-2 px-5 items-center">
-                            <img src="./logo/jqueryLogo.png" class="w-10" alt="">
-                            <p class="text-center text-gray-600 font-semibold pt-2">jQuery</p>
-                        </div>
-                    </li>
-                    <li class="shadow-md hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                        <div class="flex flex-col justify-center p-2 px-5 items-center">
-                            <img src="./logo/gsapLogo.png" class="w-10" alt="">
-                            <p class="text-center text-gray-600 font-semibold pt-2">GSAP</p>
+                    <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                        <div class="flex flex-row items-center">
+                            <img src="./logo/gsapLogo.png" class="w-8 h-8 mr-2" alt="Gsap Logo">
+                            <p class="text-slate-900 font-medium text-xs">Gsap</p>
                         </div>
                     </li>
                 </ul>
@@ -305,18 +306,18 @@
                         <li class="ml-2 text-white font-normal">Backend Development</li>
                     </ul>
                 </div>
-                <div class=" flex justify-end md:flex-row flex-col    ">
+                <div id="backTools" class=" flex justify-end md:flex-row flex-col    ">
                     <ul class="flex  gap-2 flex-wrap md:flex-nowrap  justify-center  ">
-                        <li class="shadow-md hover:-translate-y-1  hover:scale-100 transition duration-300 ease-in-out font-Poppins border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                            <div class="flex flex-col justify-center p-2 px-5 items-center">
-                                <img src="./logo/phpLogo.png" class="w-11" alt="">
-                                <p class="text-center  text-gray-600 font-semibold pt-2 ">Php</p>
+                        <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                            <div class="flex flex-row items-center">
+                                <img src="./logo/phpLogo.png" class="w-8 h-8 mr-2 " alt="Php Logo">
+                                <p class="text-slate-900 font-medium text-xs">Php</p>
                             </div>
                         </li>
-                        <li class="shadow-md hover:-translate-y-1  hover:scale-100 transition duration-300 ease-in-out font-Poppins border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                            <div class="flex flex-col justify-center p-2 px-5 items-center">
-                                <img src="./logo/laravelLogo.png" class="w-11" alt="">
-                                <p class="text-center  text-gray-600 font-semibold pt-2 ">Laravel</p>
+                        <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                            <div class="flex flex-row items-center">
+                                <img src=" ./logo/laravelLogo.png" class="w-8 h-8 mr-2" alt="Laravel Logo">
+                                <p class="text-slate-900 font-medium text-xs">Laravel</p>
                             </div>
                         </li>
                         </ul>
@@ -326,30 +327,30 @@
                             <li class="ml-2 text-white font-normal ">Tools & Platforms</li>
                         </ul>
                     </div>
-                    <div class=" flex justify-start md:flex-row flex-col    ">
+                    <div id="platTools" class=" flex justify-start md:flex-row flex-col    ">
                         <ul class="flex  gap-2 flex-wrap md:flex-nowrap  justify-center  ">
-                            <li class="shadow-md hover:-translate-y-1  hover:scale-100 transition duration-300 ease-in-out font-Poppins border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                                <div class="flex flex-col justify-center p-2 px-5 items-center">
-                                    <img src="./logo/gitLogo.png" class="w-10" alt="">
-                                    <p class="text-center  text-gray-600 font-semibold pt-2 ">Git</p>
+                            <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                                <div class="flex flex-row items-center">
+                                    <img src=" ./logo/gitLogo.png" class="w-8 h-8 mr-2" alt="Git Logo">
+                                    <p class="text-slate-900 font-medium text-xs">Git</p>
                                 </div>
                             </li>
-                            <li class="shadow-md hover:-translate-y-1  hover:scale-100 transition duration-300 ease-in-out font-Poppins border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                                <div class="flex flex-col justify-center p-2 px-5 items-center">
-                                    <i class="fab fa-github github text-3xl text-gray-700"></i>
-                                    <p class="text-center  text-gray-600 font-semibold pt-2 ">Github</p>
+                            <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                                <div class="flex flex-row items-center">
+                                    <i class="fab fa-github github text-2xl pr-2 text-gray-700"></i>
+                                    <p class="text-slate-900 font-medium text-xs">Github</p>
                                 </div>
                             </li>
-                            <li class="shadow-md hover:-translate-y-1  hover:scale-100 transition duration-300 ease-in-out font-Poppins border border-b-gray-200 rounded-md w-32 m-5 h-20 flex justify-center items-center">
-                                <div class="flex flex-col justify-center p-2 px-5 items-center">
-                                    <img src="./logo/netlifyLogo.png" class="w-11" alt="">
-                                    <p class="text-center  text-gray-600 font-semibold pt-2 ">Netlify</p>
+                            <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                                <div class="flex flex-row items-center">
+                                    <img src=" ./logo/netlifyLogo.png" class="w-8 h-8 mr-2" alt="Netlify Logo">
+                                    <p class="text-slate-900 font-medium text-xs">Netlify</p>
                                 </div>
                             </li>
-                            <li class="shadow-md hover:-translate-y-1  hover:scale-100 transition duration-300 ease-in-out font-Poppins border border-b-gray-200 rounded-md w-34 m-5 h-20 flex justify-center items-center">
-                                <div class="flex flex-col justify-center p-2 px-5 items-center">
-                                    <img src="./logo/vsLogo.png" class="w-11" alt="">
-                                    <p class="text-center text-gray-600 font-semibold pt-2 overflow-hidden whitespace-nowrap overflow-ellipsis">Visual Studio Code</p>
+                            <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
+                                <div class="flex flex-row items-center">
+                                    <img src=" ./logo/vsLogo.png" class="w-8 h-8 mr-2" alt="Visual studio Logo">
+                                    <p class="text-slate-900 font-medium text-xs">Visual Studio</p>
                                 </div>
                             </li>
                             </ul>
@@ -358,7 +359,7 @@
                             <hr>
                             <div class="flex items-center justify-between text-gray-600 px-4 py-4">
                                 <p class="text-sm ">Carl Gabrielle</p>
-                                <p class="text-sm">@Folio 2024</p>
+                                <p class="text-sm">&copy; 2024 Portfolio</p>
                             </div>
                         </div>
                     </div>
