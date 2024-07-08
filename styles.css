@@ -1,6 +1,7 @@
 body {
     font-family: 'Overused Grotesk', sans-serif;
-    background-color:  #ffff;
+    background-color: #FAFBFC  ;
+    /* #FAFBFC */
     /* background-color: #222; */
     /* overflow-y: hidden; */
     overflow-x: hidden;
@@ -61,14 +62,13 @@ background: #555;
 #projectText{
     transition:cubic-bezier(0.19, 1, 0.22, 1)0.5s;
 }
-/* .container-nav{
+.container-nav{
     background-color: white;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(6px);
-} */
+}
 .font-montserrat {
     font-family: 'Montserrat', sans-serif;
 }
