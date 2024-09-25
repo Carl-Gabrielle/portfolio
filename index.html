@@ -1,516 +1,1008 @@
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <meta name="author" content="Carl Gabrielle">
-                    <meta name="description" content="Carl Gabrielle is a 21-year-old , currently a third year  Information Technology Student">
-                    <meta name="keywords" content="Carl Gabrielle Aspiring Web Developer">
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-ZvxUjRaCv0n6m/y3Pqs83MWjyZ4CBNtf6n5vt4Qj9eBPK8zi5tHtGo4g2D0Ofqfg8sPT8GOvhkzQaE5eb2pWIdg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-                    <script src="https://cdn.tailwindcss.com"></script>
-                    <script src="https://unpkg.com/split-type"></script>
-                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
-                    <link rel="icon" type="image/jpeg" href="images/logo.png">
-                    <link rel="stylesheet" href="styles.css">
-                    <title>Carl Gabrielle Portfolio</title>
-                </head>
-                <body class="lg:overflow-show overflow-y-scroll">
-                    <div class=" w-full  container-nav container-dark h-20   fixed z-30  border-b">
-                        <div class="flex justify-between items-center h-full max-w-6xl px-6 mx-auto">
-                            <a href="index.html" >
-                                <p class="antialised font-semibold font-montserrat text-xs tracking-wide rounded-md text-white bg-black px-5 py-1" id="name">
-                                    Carl Gabrielle <br>
-                                    <span class="small-text antialiased">Aspiring Web Developer</span>
-                                </p>
-                            </a>
-                            <nav id="navs" class="hidden md:block">
-                                <ul class="flex space-x-8 text-gray-700 font-normal text-sm">
-                                    <li> 
-                                        <a href="" onclick="scrollToSection(event, 'home', 0)"  class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500">
-                                            <div class="flex flex-col items-center">
-                                                <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.848 2.752a1.2 1.2 0 0 0-1.696 0l-8.4 8.4a1.2 1.2 0 0 0 1.696 1.696l.352-.351V20.4A1.2 1.2 0 0 0 6 21.6h2.4a1.2 1.2 0 0 0 1.2-1.2V18a1.2 1.2 0 0 1 1.2-1.2h2.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 0 1.2 1.2H18a1.2 1.2 0 0 0 1.2-1.2v-7.903l.352.351a1.2 1.2 0 0 0 1.696-1.696l-8.4-8.4Z"></path>
-                                                </svg>
-                                                Home
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a  href="" onclick="scrollToSection(event, 'about-me', 90)" class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500">
-                                            <div class="flex flex-col items-center">
-                                                <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" d="M12 10.8a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2ZM3.6 21.6a8.4 8.4 0 0 1 16.8 0H3.6Z" clip-rule="evenodd"></path>
-                                                </svg>
-                                                About
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"  onclick="scrollToSection(event, 'projects', 120)" class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500">
-                                            <div class="flex flex-col items-center">
-                                                <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" d="M7.2 7.2V6a3.6 3.6 0 0 1 3.6-3.6h2.4A3.6 3.6 0 0 1 16.8 6v1.2h2.4a2.4 2.4 0 0 1 2.4 2.4v4.284A27.542 27.542 0 0 1 12 15.6a27.542 27.542 0 0 1-9.6-1.716V9.6a2.4 2.4 0 0 1 2.4-2.4h2.4ZM9.6 6a1.2 1.2 0 0 1 1.2-1.2h2.4A1.2 1.2 0 0 1 14.4 6v1.2H9.6V6Zm1.2 6a1.2 1.2 0 0 1 1.2-1.2h.012a1.2 1.2 0 1 1 0 2.4H12a1.2 1.2 0 0 1-1.2-1.2Z" clip-rule="evenodd"></path>
-                                                    <path d="M2.4 16.43v2.77a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4v-2.77A29.97 29.97 0 0 1 12 18c-3.355 0-6.584-.552-9.6-1.57Z"></path>
-                                                </svg>
-                                                Projects
-                                            </div>
-                                            <i class="fas fa-arrow-down text-sm arrow-icon text-gray-800" style="display: none;"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="scrollToSection(event, 'contacts', 0)"  class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500">
-                                            <div class="flex flex-col items-center ">
-                                                <svg class="icon-nav" width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M2.404 7.06 12 11.859l9.596-4.797A2.4 2.4 0 0 0 19.2 4.8H4.8a2.4 2.4 0 0 0-2.396 2.26Z"></path>
-                                                    <path d="m21.6 9.742-9.6 4.8-9.6-4.8V16.8a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4V9.742Z"></path>
-                                                </svg>
-                                                Contact
-                                            </div>
-                                            <i class="fas fa-arrow-down text-sm arrow-icon text-gray-900" style="display: none;"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        <div class="flex items-center gap-4">
-                        <a class="hidden md:block   modes text-gray-500  hover:text-gray-600"  href="https://www.linkedin.com/in/carl-gabrielle-61665424a/"  target="_blank"><p>@carlgabrielle</p></a>
-                            <button id="toggleIcon" class="toggle-icon modes text-yellow-400">
-                                <i id="icon" class="fa fa-moon"></i>
-                            </button>
-                            <svg id="menu-Bar" class="block sm:hidden cursor-pointer" width="24" height="24" fill="none" stroke="#6b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 18h16M4 6h16H4Zm0 6h16H4Z"></path>
-                            </svg>
-                        </div>
-                        </div>
-                        <div class="z-10" id="overlay"></div>
-                        <div id="mobile-Div"  class="hidden">
-                        <div class="block sm:hidden flex justify-end  max-w-6xl mx-auto px-6">
-                            <div class="z-30  bg-white rounded-md shadow-md border w-64 h-72 mt-3">
-                                <div class="p-4">
-                                    <ul class="flex flex-col  space-y-4  font-normal">
-                                        <li class="flex space-x-3 items-center ">
-                                            <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12.848 2.752a1.2 1.2 0 0 0-1.696 0l-8.4 8.4a1.2 1.2 0 0 0 1.696 1.696l.352-.351V20.4A1.2 1.2 0 0 0 6 21.6h2.4a1.2 1.2 0 0 0 1.2-1.2V18a1.2 1.2 0 0 1 1.2-1.2h2.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 0 1.2 1.2H18a1.2 1.2 0 0 0 1.2-1.2v-7.903l.352.351a1.2 1.2 0 0 0 1.696-1.696l-8.4-8.4Z"></path>
-                                            </svg>
-                                            <a  href="#home" class="nav-mobile" href="">Home</a>
-                                        </li>
-                                        <a class="nav-mobile">
-                                        <li class="flex space-x-3 items-center">
-                                            <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M12 10.8a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2ZM3.6 21.6a8.4 8.4 0 0 1 16.8 0H3.6Z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <a class="nav-mobile"  href="#about-me">About Me</a>
-                                        </li>
-                                    </a>
-                                        <hr class="border ">
-                                        <li class="flex space-x-3 items-center">
-                                            <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M7.2 7.2V6a3.6 3.6 0 0 1 3.6-3.6h2.4A3.6 3.6 0 0 1 16.8 6v1.2h2.4a2.4 2.4 0 0 1 2.4 2.4v4.284A27.542 27.542 0 0 1 12 15.6a27.542 27.542 0 0 1-9.6-1.716V9.6a2.4 2.4 0 0 1 2.4-2.4h2.4ZM9.6 6a1.2 1.2 0 0 1 1.2-1.2h2.4A1.2 1.2 0 0 1 14.4 6v1.2H9.6V6Zm1.2 6a1.2 1.2 0 0 1 1.2-1.2h.012a1.2 1.2 0 1 1 0 2.4H12a1.2 1.2 0 0 1-1.2-1.2Z" clip-rule="evenodd"></path>
-                                                <path d="M2.4 16.43v2.77a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4v-2.77A29.97 29.97 0 0 1 12 18c-3.355 0-6.584-.552-9.6-1.57Z"></path>
-                                            </svg>
-                                            <a class="nav-mobile" href="#projects">Projects</a>
-                                        </li>
-                                        <li class="flex space-x-3 items-center">
-                                            <svg width="22" height="22" fill="#6b7280" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.404 7.06 12 11.859l9.596-4.797A2.4 2.4 0 0 0 19.2 4.8H4.8a2.4 2.4 0 0 0-2.396 2.26Z"></path>
-                                                <path d="m21.6 9.742-9.6 4.8-9.6-4.8V16.8a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4V9.742Z"></path>
-                                            </svg>
-                                            <a class="nav-mobile" href="#contacts">Contact</a>
-                                        </li>
-                                        <li class="flex space-x-3 items-center ">
-                                            <svg width="22" height="22" fill="none" stroke="#6b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M13.828 10.172a4 4 0 0 0-5.656 0l-4 4a4 4 0 1 0 5.656 5.656l1.102-1.1"></path>
-                                                <path d="M10.172 13.828a4 4 0 0 0 5.656 0l4-4a4 4 0 0 0-5.656-5.656l-1.1 1.1"></path>
-                                            </svg>
-                                            <a  class="nav-mobile text-gray-500  hover:text-gray-600 "  href="https://www.linkedin.com/in/carl-gabrielle-61665424a/" target="_blank"> @carlgabrielle</a>
-                                        </li>
-                                        <hr class="border  ">
-                                        <li class="flex space-x-3 text-gray-500 items-center text-xs justify-between">
-                                            <span>Carl Gabrielle</span>
-                                            <span>&copy; 2024 Portfolio</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div id="home"  class="w-full h-full ">
-                    <div class="px-6  max-w-6xl py-10 mx-auto  md:py-16 relative ">
-                        <div class="flex  flex-col-reverse sm:flex-row justify-between items-center gap-8 mt-16">
-                            <div class="sm:w-1/2  h-100 py-10 text-center md:text-center flex flex-col justify-center items-center md:items-start">
-                                <p id="text" class="antialiased text-6xl sm:text-6xl  text-gray-800  tracking-wide font-extrabold  mb-2 "style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);">Hello, <span class=" px-6 transition duration-300 ease-in-out hover:bg-white rounded-md py-2 inline-flex items-center dark-name">I'm Carl </span></p>
-                                <p id="content1" class="text-1xl text-justify text-gray-600 leading-8"> I'm a 21-year-old 👋, currently in my third year as an I.T. student with a strong passion for becoming <span class="font-bold container-dark text-gray-800 text-field bg-white px-3 rounded-md py-1">a proficient  web  developer</span>. I have a strong desire to grow in my chosen field and I'm always looking to adopt the newest trends and technological breakthroughs 🚀.</p>
-                                <hr class="mt-4 w-full border-gray-400 ">
-                                <div class="text-1xl space-x-2 flex justify-between items-center w-full mt-10">
-                                    <a href="#"><button class="btn-dark px-6 py-2 text-sm sm:text-base text-white font-semibold rounded-full bg-black flex items-center">
-                                        <i class="fas fa-download pr-2"></i> Download CV
-                                    </button></a>
-                                    <div class="flex space-x-4 text-2xl text-gray-700">
-                                        <a href="" class="social-link"><i class="fab fa-facebook "></i></a>
-                                        <a href="https://www.instagram.com/carlgabrielle/" target="_blank" class="social-link"><i class="fab fa-instagram "></i></a>
-                                        <a href="https://github.com/Carl-Gabrielle"  target="_blank" class="social-link"><i class="fab fa-github "></i></a>
-                                        <a href="https://www.linkedin.com/in/carl-gabrielle-61665424a/"  target="_blank" class="social-link"><i class="fab fa-linkedin "></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sm:w-1/2 h-100 py-10 rounded-3xl bg-white flex items-center justify-center container-dark " >
-                                <img id="profileImage" src="images/profile.jpeg" alt="Your Image" class="w-1/2 h-3/4   object-cover rounded-3xl ">
-                            </div>
-                        </div>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Carl Gabrielle" />
+    <meta
+      name="description"
+      content="Carl Gabrielle is a 21-year-old , currently a third year  Information Technology Student"
+    />
+    <meta name="keywords" content="Carl Gabrielle Aspiring Web Developer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-ZvxUjRaCv0n6m/y3Pqs83MWjyZ4CBNtf6n5vt4Qj9eBPK8zi5tHtGo4g2D0Ofqfg8sPT8GOvhkzQaE5eb2pWIdg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/jpeg" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Carl Gabrielle Portfolio</title>
+  </head>
+  <body class="lg:overflow-show overflow-y-scroll">
+    <div class="w-full container-nav container-dark h-20 fixed z-30 border-b">
+      <div
+        class="flex justify-between items-center h-full max-w-6xl px-6 mx-auto"
+      >
+        <a href="index.html">
+          <p
+            class="antialised font-semibold font-montserrat text-xs tracking-wide rounded-md text-white bg-black px-5 py-1"
+            id="name"
+          >
+            Carl Gabrielle <br />
+            <span class="small-text antialiased">Aspiring Web Developer</span>
+          </p>
+        </a>
+        <nav id="navs" class="hidden md:block">
+          <ul class="flex space-x-8 text-gray-700 font-normal text-sm">
+            <li>
+              <a
+                href=""
+                onclick="scrollToSection(event, 'home', 0)"
+                class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500"
+              >
+                <div class="flex flex-col items-center">
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="#6b7280"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.848 2.752a1.2 1.2 0 0 0-1.696 0l-8.4 8.4a1.2 1.2 0 0 0 1.696 1.696l.352-.351V20.4A1.2 1.2 0 0 0 6 21.6h2.4a1.2 1.2 0 0 0 1.2-1.2V18a1.2 1.2 0 0 1 1.2-1.2h2.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 0 1.2 1.2H18a1.2 1.2 0 0 0 1.2-1.2v-7.903l.352.351a1.2 1.2 0 0 0 1.696-1.696l-8.4-8.4Z"
+                    ></path>
+                  </svg>
+                  Home
                 </div>
-                <h2 id="about-me"  class="text-center   mt-10 hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide  hover:underline ">About Me</h2>
-                <div class="w-full h-full  ">
-                    <div class="px-6  max-w-6xl  mx-auto   relative ">
-                        <div class="flex flex-col sm:flex-row justify-start sm:items-start items-center space-x-4 gap-5 mt-10">
-                            <img id="aboutImage" class="w-52 h-80 filter grayscale hover:grayscale-0 transition duration-300 ease-in-out rounded-md" src="./images/aboutImg.jpg" alt="">
-                            <div id="story" class="text-sm ">
-                                <h1 class="text-gray-800 font-semibold  uppercase pt-10">Get to Know Me:</h1>
-                                <p  class="text-gray-600 mt-4 leading-relaxed text-justify">
-                                My journey into web development began with a curiosity about how websites are built and a desire to bring ideas to life through code.
-                                </p>
-                                <p class="text-gray-600 mt-4 leading-relaxed text-justify">
-                                    I have experience in front-end development, working with technologies such as HTML, CSS, JavaScript, and starting to learn frameworks like React. I'm also proficient in using tools like Tailwind CSS to build responsive and visually appealing user interfaces.
-                                </p>
-                                <p class="text-gray-600 mt-4 leading-relaxed text-justify">
-                                    When I'm not coding, I enjoy exploring new design trends, reading tech blogs, and continuously learning new skills to enhance my development expertise.
-                                </p>
-                            </div>
-                        </div>
-                <div id="accomplishments" class="py-5">
-                    <h1 class="text-gray-800 font-semibold uppercase text-sm">Accomplishments:</h1>
-                    <ul class="pl-5 text-sm leading-7">
-                        <li><i class="fas fa-award text-yellow-500 mr-2"></i>Dean's Lister 1st sem - 2nd sem - Pangasinan State University Urdaneta City Campus</li>
-                        <li><i class="fas fa-award text-yellow-500 mr-2"></i>Dean's Lister 1st sem - Pangasinan State University Alaminos City Campus</li>
-                        <li><i class="fas fa-certificate text-blue-500 mr-2"></i>freeCodeCamp Responsive Web Design Certification</li>
-                        <li><i class="fas fa-trophy text-red-500 mr-2"></i>2nd Place Programming Quiz IT Festival 2023</li>
-                        <li><i class="fas fa-trophy text-red-500 mr-2"></i>2nd Place Web Design IT Festival 2024</li>
-                        <li><i class="fas fa-user-check text-green-500 mr-2"></i>CITEDH-R1 (CRRCISC) Regional Research Conference in ITE & IT Skills Competition - IT Quiz Bee Participant</li>
-                        <li><i class="fas fa-user-check text-green-500 mr-2"></i>National Conference on Computing, Education, and Business (NCCEB) 2024 participant</li>
-                    </ul>
-                </div> 
-                <h2  class="text-center mt-5  hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide  hover:underline ">Education</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 py-10">
-                    <div id="psu" class="bg-white container-dark rounded-xl h-32 shadow-lg relative overflow-hidden flex items-center justify-between px-6 py-4">
-                        <div class="flex items-center">
-                            <img class="w-16 h-16 mr-4 rounded-full" src="./logo/psuLogo.png" alt="PSU Logo">
-                            <div>
-                                <h2 class="text-md font-semibold text-gray-800">Bachelor of Science in Information Technology</h2>
-                                <p class="text-xs text-gray-500">August 2021 - Present</p>
-                                <p class="text-xs text-gray-500">Pangasinan State University - Alaminos City Campus</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="acnhs" class="bg-white container-dark rounded-xl h-32 shadow-lg relative overflow-hidden flex items-center justify-between px-6 py-4">
-                        <div class="flex items-center">
-                            <img class="w-16 h-16 mr-4 rounded-full" src="./logo/AcnhsLogo.png" alt="Acnhs Logo">
-                            <div>
-                                <h2 class="text-md font-semibold text-gray-800">Science Technology Engineering  and Mathematics</h2>
-                                <p class="text-xs text-gray-500">June 2019 - 2021</p>
-                                <p class="text-xs text-gray-500">Alaminos City National High School</p>
-                            </div>
-                        </div>
-                    </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                onclick="scrollToSection(event, 'about-me', 90)"
+                class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500"
+              >
+                <div class="flex flex-col items-center">
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="#6b7280"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 10.8a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2ZM3.6 21.6a8.4 8.4 0 0 1 16.8 0H3.6Z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  About
                 </div>
-                <h2  class="text-center mt-10  hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide  hover:underline ">Certificates</h2>
-                            
-                                <div id="certificates" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 ">
-                                <a href="" >
-                                    <div class="overflow-hidden  h-48 relative ">
-                                        <div class="absolute inset-0 flex items-center justify-center py-2 ">
-                                            <img class="w-64 h-44  object-cover " src="images/freCode.png" alt="Freecodecamp Certification">
-                                        </div>
-                                    </div>
-                                </a>
-                                    
-                                <a href="">
-                                    <div class=" overflow-hidden  h-48 relative ">
-                                        <div class="absolute inset-0 flex items-center justify-center py-2 ">
-                                            <img class="w-64 h-44  object-cover " src="images/NccebCert.jpg" alt="Ncceb Certification">
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class=" overflow-hidden  h-48 relative ">
-                                        <div class="absolute inset-0 flex items-center justify-center py-2 ">
-                                            <img class="w-64 h-44  object-cover " src="images/progQuiz.jpg" alt="Prog. Quiz Certification">
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                            
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="scrollToSection(event, 'projects', 120)"
+                class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500"
+              >
+                <div class="flex flex-col items-center">
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="#6b7280"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.2 7.2V6a3.6 3.6 0 0 1 3.6-3.6h2.4A3.6 3.6 0 0 1 16.8 6v1.2h2.4a2.4 2.4 0 0 1 2.4 2.4v4.284A27.542 27.542 0 0 1 12 15.6a27.542 27.542 0 0 1-9.6-1.716V9.6a2.4 2.4 0 0 1 2.4-2.4h2.4ZM9.6 6a1.2 1.2 0 0 1 1.2-1.2h2.4A1.2 1.2 0 0 1 14.4 6v1.2H9.6V6Zm1.2 6a1.2 1.2 0 0 1 1.2-1.2h.012a1.2 1.2 0 1 1 0 2.4H12a1.2 1.2 0 0 1-1.2-1.2Z"
+                      clip-rule="evenodd"
+                    ></path>
+                    <path
+                      d="M2.4 16.43v2.77a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4v-2.77A29.97 29.97 0 0 1 12 18c-3.355 0-6.584-.552-9.6-1.57Z"
+                    ></path>
+                  </svg>
+                  Projects
+                </div>
+                <i
+                  class="fas fa-arrow-down text-sm arrow-icon text-gray-800"
+                  style="display: none"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="scrollToSection(event, 'contacts', 0)"
+                class="underline-thick flex justify-between items-center nav-link hover:underline underline-offset-4 hover:text-gray-500"
+              >
+                <div class="flex flex-col items-center">
+                  <svg
+                    class="icon-nav"
+                    width="22"
+                    height="22"
+                    fill="#6b7280"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.404 7.06 12 11.859l9.596-4.797A2.4 2.4 0 0 0 19.2 4.8H4.8a2.4 2.4 0 0 0-2.396 2.26Z"
+                    ></path>
+                    <path
+                      d="m21.6 9.742-9.6 4.8-9.6-4.8V16.8a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4V9.742Z"
+                    ></path>
+                  </svg>
+                  Contact
+                </div>
+                <i
+                  class="fas fa-arrow-down text-sm arrow-icon text-gray-900"
+                  style="display: none"
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a
+            class="hidden md:block modes text-gray-500 hover:text-gray-600"
+            href="https://www.linkedin.com/in/carl-gabrielle-61665424a/"
+            target="_blank"
+            ><p>@carlgabrielle</p></a
+          >
+          <button id="toggleIcon" class="toggle-icon modes text-yellow-400">
+            <i id="icon" class="fa fa-moon"></i>
+          </button>
+          <svg
+            id="menu-Bar"
+            class="block sm:hidden cursor-pointer"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="#6b7280"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M4 18h16M4 6h16H4Zm0 6h16H4Z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="z-10" id="overlay"></div>
+      <div id="mobile-Div" class="hidden">
+        <div class="block sm:hidden flex justify-end max-w-6xl mx-auto px-6">
+          <div class="z-30 bg-white rounded-md shadow-md border w-64 h-72 mt-3">
+            <div class="p-4">
+              <ul class="flex flex-col space-y-4 font-normal">
+                <li class="flex space-x-3 items-center">
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="#6b7280"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.848 2.752a1.2 1.2 0 0 0-1.696 0l-8.4 8.4a1.2 1.2 0 0 0 1.696 1.696l.352-.351V20.4A1.2 1.2 0 0 0 6 21.6h2.4a1.2 1.2 0 0 0 1.2-1.2V18a1.2 1.2 0 0 1 1.2-1.2h2.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 0 1.2 1.2H18a1.2 1.2 0 0 0 1.2-1.2v-7.903l.352.351a1.2 1.2 0 0 0 1.696-1.696l-8.4-8.4Z"
+                    ></path>
+                  </svg>
+                  <a href="#home" class="nav-mobile" href="">Home</a>
+                </li>
+                <a class="nav-mobile">
+                  <li class="flex space-x-3 items-center">
+                    <svg
+                      width="22"
+                      height="22"
+                      fill="#6b7280"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 10.8a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2ZM3.6 21.6a8.4 8.4 0 0 1 16.8 0H3.6Z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <a class="nav-mobile" href="#about-me">About Me</a>
+                  </li>
+                </a>
+                <hr class="border" />
+                <li class="flex space-x-3 items-center">
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="#6b7280"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.2 7.2V6a3.6 3.6 0 0 1 3.6-3.6h2.4A3.6 3.6 0 0 1 16.8 6v1.2h2.4a2.4 2.4 0 0 1 2.4 2.4v4.284A27.542 27.542 0 0 1 12 15.6a27.542 27.542 0 0 1-9.6-1.716V9.6a2.4 2.4 0 0 1 2.4-2.4h2.4ZM9.6 6a1.2 1.2 0 0 1 1.2-1.2h2.4A1.2 1.2 0 0 1 14.4 6v1.2H9.6V6Zm1.2 6a1.2 1.2 0 0 1 1.2-1.2h.012a1.2 1.2 0 1 1 0 2.4H12a1.2 1.2 0 0 1-1.2-1.2Z"
+                      clip-rule="evenodd"
+                    ></path>
+                    <path
+                      d="M2.4 16.43v2.77a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4v-2.77A29.97 29.97 0 0 1 12 18c-3.355 0-6.584-.552-9.6-1.57Z"
+                    ></path>
+                  </svg>
+                  <a class="nav-mobile" href="#projects">Projects</a>
+                </li>
+                <li class="flex space-x-3 items-center">
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="#6b7280"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.404 7.06 12 11.859l9.596-4.797A2.4 2.4 0 0 0 19.2 4.8H4.8a2.4 2.4 0 0 0-2.396 2.26Z"
+                    ></path>
+                    <path
+                      d="m21.6 9.742-9.6 4.8-9.6-4.8V16.8a2.4 2.4 0 0 0 2.4 2.4h14.4a2.4 2.4 0 0 0 2.4-2.4V9.742Z"
+                    ></path>
+                  </svg>
+                  <a class="nav-mobile" href="#contacts">Contact</a>
+                </li>
+                <li class="flex space-x-3 items-center">
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="#6b7280"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.828 10.172a4 4 0 0 0-5.656 0l-4 4a4 4 0 1 0 5.656 5.656l1.102-1.1"
+                    ></path>
+                    <path
+                      d="M10.172 13.828a4 4 0 0 0 5.656 0l4-4a4 4 0 0 0-5.656-5.656l-1.1 1.1"
+                    ></path>
+                  </svg>
+                  <a
+                    class="nav-mobile text-gray-500 hover:text-gray-600"
+                    href="https://www.linkedin.com/in/carl-gabrielle-61665424a/"
+                    target="_blank"
+                  >
+                    @carlgabrielle</a
+                  >
+                </li>
+                <hr class="border" />
+                <li
+                  class="flex space-x-3 text-gray-500 items-center text-xs justify-between"
+                >
+                  <span>Carl Gabrielle</span>
+                  <span>&copy; 2024 Portfolio</span>
+                </li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="home" class="w-full h-full">
+      <div class="px-6 max-w-6xl py-10 mx-auto md:py-16 relative">
+        <div
+          class="flex flex-col-reverse sm:flex-row justify-between items-center gap-8 mt-16"
+        >
+          <div
+            class="sm:w-1/2 h-100 py-10 text-center md:text-center flex flex-col justify-center items-center md:items-start"
+          >
+            <p
+              id="text"
+              class="antialiased text-6xl sm:text-6xl text-gray-800 tracking-wide font-extrabold mb-2"
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
+            >
+              Hello,
+              <span
+                class="px-6 transition duration-300 ease-in-out hover:bg-white rounded-md py-2 inline-flex items-center dark-name"
+                >I'm Carl
+              </span>
+            </p>
+            <p
+              id="content1"
+              class="text-1xl text-justify text-gray-600 leading-8"
+            >
+              I'm a 21-year-old 👋, currently in my third year as an I.T.
+              student with a strong passion for becoming
+              <span
+                class="font-bold container-dark text-gray-800 text-field bg-white px-3 rounded-md py-1"
+                >a proficient web developer</span
+              >. I have a strong desire to grow in my chosen field and I'm
+              always looking to adopt the newest trends and technological
+              breakthroughs 🚀.
+            </p>
+            <hr class="mt-4 w-full border-gray-400" />
+            <div
+              class="text-1xl space-x-2 flex justify-between items-center w-full mt-10"
+            >
+              <a href="#"
+                ><button
+                  class="btn-dark px-6 py-2 text-sm sm:text-base text-white font-semibold rounded-full bg-black flex items-center"
+                >
+                  <i class="fas fa-download pr-2"></i> Download CV
+                </button></a
+              >
+              <div class="flex space-x-4 text-2xl text-gray-700">
+                <a href="" class="social-link"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/carlgabrielle/"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://github.com/Carl-Gabrielle"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/carl-gabrielle-61665424a/"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
             </div>
-                    <div id="projects" class=" w-full h-full   mt-16   pb-5 ">
-                        <div class="px-6 max-w-6xl mx-auto pt-1 md:pt-4 bg-Proj" style="background-image: url('images/project_bg.png'); background-size: 85%; background-position: center; background-repeat: no-repeat;">
-                            <div id="projectTitle">
-                                <h1  class="font-extrabold  text-5xl md:text-7xl md:text-center items-center text-center tracking-widest uppercase leading-none text-gray-800 md:-mt-10 mt-10">Recent Projects</h1>
-                            </div>
-                            <div class="relative h-full w-full project-container hidden md:block   ">
-                                <h1 id="projectText" class="absolute    text-black font-extrabold tracking-wider" > Projects</h1>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:mt-20 mt-20">
-                            <a href="">
-                                <div id="proj1" class="divProj relative z-20 container-dark  w-full h-72 bg-white mb-10 rounded-tl-3xl rounded-br-3xl">
-                                    <div class="absolute top-0 right-0   flex justify-center pb-4">
-                                        <p class="bg-black px-6  text-white  py-1 font-extrabold">Personal Website</p>
-                                    </div>
-                                    <div class="absolute bottom-1/2 left-1/2 transform -translate-x-1/2">
-                                        <span class="text-yellow-500">In Progress</span>
-                                    </div>
-                                    <!-- <div class="absolute bottom-0  left-0  px-10 flex justify-center pb-3 ">
-                                        <ul class="flex gap-4  ">
-                                            <li class="  bg-gray-200 px-6 py-1 text-gray-500 font-normal rounded-full">task</li>
-                                            <li class=" bg-gray-200 px-6 py-1 text-gray-500 font-normal rounded-full">management</li>
-                                        </ul>
-                                    </div> -->
-                                    <div class="absolute bottom-0 right-0  px-10 flex justify-center pb-4">
-                                        <p class="text-black text-2xl font-extrabold">01</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div id="proj2" class=" divProj relative z-20  container-dark  w-full h-72 bg-white mb-10 rounded-tl-3xl rounded-br-3xl">
-                                    <div class="absolute top-0 right-0   flex justify-center pb-4">
-                                        <p class="bg-black  px-6 text-white text-center  py-1 font-extrabold">BiliNao - E-commerce for Handicrafts</p>
-                                    </div>
-                                    <div class="absolute bottom-1/2 left-1/2 transform -translate-x-1/2">
-                                        <span class="text-yellow-500">In Progress</span>
-                                    </div>
-                                    <div class="absolute bottom-0 right-0  px-10 flex justify-center pb-4">
-                                        <p class="text-black text-2xl font-extrabold">02</p>
-                                    </div>
-                                </div>
-                            </a> 
-                        <a href="https://github.com/Carl-Gabrielle/task-management-system.git" target="_blank">
-                            <div id="proj3" class="divProj relative z-20 container-dark  w-full h-72  bg-white rounded-tl-3xl rounded-br-3xl">
-                                <div class="absolute w-full h-full  transition-transform duration-1000 ease-in-out hover:scale-110" style="background-image: url('images/task-image.png'); background-size: 75%; background-position: center; background-repeat: no-repeat;"></div>
-                                <div class="absolute top-0 right-0   flex justify-center pb-4">
-                                    <p class="bg-black px-6  text-white  py-1 font-extrabold">Task Management System</p>
-                                </div>
-                                <div class="absolute bottom-0 right-0  px-10 flex justify-center pb-4">
-                                    <p class="text-black text-2xl font-extrabold">03</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://hinptourismwebsite.netlify.app/" target="_blank">
-                            <div id="proj4" class="divProj relative z-20  container-dark  bg-white w-full h-72   rounded-tl-3xl rounded-br-3xl">
-                                <div class="absolute w-full h-full  transition-transform duration-1000 ease-in-out hover:scale-125  right-0" style="background-image: url('images/hi-mockup.png'); background-size: 75%; background-position:center; background-repeat: no-repeat;"></div>
-                                <div class="absolute top-0 right-0   flex justify-center pb-4">
-                                    <p class="bg-black px-6  text-white  py-1 font-extrabold">Hundred Islands Tourism Website</p>
-                                </div>
-                            <div class="absolute bottom-0 right-0  px-10 flex justify-center pb-4">
-                                <p class="text-black  text-2xl font-extrabold">04</p>
-                            </div>
-                        </div>
-                    </a>
-                            </div>
-                    </div>
-                    </div>
-                    
-                    <div class="w-full h-full   ">
-                        <div class="px-6  max-w-6xl  mx-auto pt-1 md:pt-1 ">
-                        <div id="tech-stack" class="text-center md:text-center">
-                            <h2  class="flex justify-center items-center mt-24  hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide  hover:underline ">Tech Stack</h2>
-                            <p class="text-1xl   text-center text-gray-600 flex  justify-center  pt-3">An overview of the tech stack I use to create web applications 
-                            </p>
-                        </div>
-                        <div  class="flex justify-center sm:justify-start m-5 pt-3">
-                            <ul id="front" class="bg-black p-2 px-5 rounded-3xl">
-                                <li class="ml-2  text-white font-normal" >Frontend Development</li>
-                            </ul>
-                        </div>
-                        <div id="frontTools" class="flex flex-col sm:grid sm:grid-cols-3 sm:gap-2 justify-center md:justify-start">
-                            <ul class="flex gap-2 flex-wrap justify-center md:justify-start sm:col-span-3">
-                                <li class="shadow-md      border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                    <div class="flex flex-row items-center">
-                                        <img src="./logo/htmlLogo.png" class="w-8 h-8 mr-2" alt="HTML Logo">
-                                        <p class="text-slate-900 font-medium text-xs">HTML5</p>
-                                    </div>
-                                </li>
-                                
-                                <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                    <div class="flex flex-row items-center">
-                                        <img src=" ./logo/cssLogo.png" class="w-8 h-8 mr-2" alt="CSS Logo">
-                                        <p class="text-slate-900 font-medium text-xs">CSS</p>
-                                    </div>
-                                </li>
-                                <li class="shadow-md    border border-gray-300 rounded-lg px-2 w-32 m-3 h-16 flex justify-center items-center ">
-                                    <div class="flex flex-row items-center">
-                                        <img src=" ./logo/jsLogo.png" class="w-8 h-8 mr-2" alt="JS Logo">
-                                        <p class="text-slate-900 font-medium text-xs">Javascript</p>
-                                    </div>
-                                </li>
-                                <li class="shadow-md    border border-gray-300 rounded-lg px-2 w-32 m-3 h-16 flex justify-center items-center ">
-                                    <div class="flex flex-row items-center">
-                                        <img src=" ./logo/reactLogo.png" class="w-8 h-8 mr-2" alt="React JS Logo">
-                                        <p class="text-slate-900 font-medium text-xs">React JS</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="flex gap-2 flex-wrap justify-center md:justify-start sm:col-span-3">
-                                <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                    <div class="flex flex-row items-center">
-                                        <img src=" ./logo/bootstrapLogo.png" class="w-8 h-8 mr-2" alt="Bootstrap Logo">
-                                        <p class="text-slate-900 font-medium text-xs">Bootstrap</p>
-                                    </div>
-                                </li>
-                                <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                    <div class="flex flex-row items-center">
-                                        <img src="./logo/tailwindLogo.png" class="w-8 h-8 mr-2" alt="TailwindCss Logo">
-                                        <p class="text-slate-900 font-medium text-xs">Tailwind</p>
-                                    </div>
-                                </li>
-                                <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                    <div class="flex flex-row items-center">
-                                        <img src="./logo/jqueryLogo.png" class="w-8 h-8 mr-2" alt="JqueryLogo">
-                                        <p class="text-slate-900 font-medium text-xs">Jquery</p>
-                                    </div>
-                                </li>
-                                <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                    <div class="flex flex-row items-center">
-                                        <img src="./logo/gsapLogo.png" class="w-8 h-8 mr-2" alt="Gsap Logo">
-                                        <p class="text-slate-900 font-medium text-xs">Gsap</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                            <div class="flex justify-center sm:justify-end m-5 pt-3">
-                                <ul id="back" class=" bg-black p-2 px-5  rounded-3xl">
-                                    <li class="ml-2 text-white font-normal">Backend Development</li>
-                                </ul>
-                            </div>
-                            <div id="backTools" class=" flex justify-end md:flex-row flex-col    ">
-                                <ul class="flex  gap-2 flex-wrap md:flex-nowrap  justify-center  ">
-                                    <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                        <div class="flex flex-row items-center">
-                                            <img src="./logo/phpLogo.png" class="w-8 h-8 mr-2 " alt="Php Logo">
-                                            <p class="text-slate-900 font-medium text-xs">Php</p>
-                                        </div>
-                                    </li>
-                                    <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                        <div class="flex flex-row items-center">
-                                            <img src=" ./logo/laravelLogo.png" class="w-8 h-8 mr-2" alt="Laravel Logo">
-                                            <p class="text-slate-900 font-medium text-xs">Laravel</p>
-                                        </div>
-                                    </li>
-                                    </ul>
-                                </div>
-                                <div class="flex justify-center sm:justify-start m-5 pt-3">
-                                    <ul id="tools" class=" bg-black p-2 px-5  rounded-3xl">
-                                        <li class="ml-2 text-white font-normal ">Tools & Platforms</li>
-                                    </ul>
-                                </div>
-                                <div id="platTools" class=" flex justify-start md:flex-row flex-col    ">
-                                    <ul class="flex  gap-2 flex-wrap md:flex-nowrap  justify-center  ">
-                                        <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                            <div class="flex flex-row items-center">
-                                                <img src=" ./logo/gitLogo.png" class="w-8 h-8 mr-2" alt="Git Logo">
-                                                <p class="text-slate-900 font-medium text-xs">Git</p>
-                                            </div>
-                                        </li>
-                                        <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                            <div class="flex flex-row items-center">
-                                                <i class="fab fa-github github text-2xl pr-2 text-gray-700"></i>
-                                                <p class="text-slate-900 font-medium text-xs">Github</p>
-                                            </div>
-                                        </li>
-                                        <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                            <div class="flex flex-row items-center">
-                                                <img src=" ./logo/netlifyLogo.png" class="w-8 h-8 mr-2" alt="Netlify Logo">
-                                                <p class="text-slate-900 font-medium text-xs">Netlify</p>
-                                            </div>
-                                        </li>
-                                        <li class="shadow-md    border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center ">
-                                            <div class="flex flex-row items-center">
-                                                <img src=" ./logo/vsLogo.png" class="w-8 h-8 mr-2" alt="Visual studio Logo">
-                                                <p class="text-slate-900 font-medium text-xs">Visual Studio</p>
-                                            </div>
-                                        </li>
-                                        </ul>
-                                    </div>
-                                    <h2 id="contacts"  class="text-center mt-10  hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide  hover:underline ">Contact</h2>
-                                    <div class="flex flex-col lg:flex-row items-center">
-                                        <div id="quoteDiv" class="order-1 lg:order-none w-full lg:w-1/2 px-4 lg:px-0">
-                                            <h1  class="text-2xl lg:text-3xl font-bold mb-4 text-gray-900">Bringing Your Vision to Life. Let's Connect!</h1>
-                                        </div>
-                                        <div id="contactDiv" class="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 w-full lg:w-1/2">
-                                            <a href="mailto:orfinadacarlgabrielle@gmail.com" class="container-dark bg-white block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg">
-                                                <div class="px-6 py-4">
-                                                    <div class="flex items-center">
-                                                        <img class="w-10 h-10 rounded-full mr-4" src="./logo/emailLogo.png" alt="Email Logo">
-                                                        <div class="text-sm">
-                                                            <p class="text-gray-900 leading-none">Send me an email:</p>
-                                                            <p class="text-gray-600 text-xs">orfinadacarlgabrielle@gmail.com</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" target="_blank" class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
-                                                <div class="px-6 py-4">
-                                                    <div class="flex items-center">
-                                                        <i class="fab fa-facebook text-3xl text-blue-500 mr-4"></i>
-                                                        <div>
-                                                            <p class="text-gray-900 leading-none text-sm">Connect on Facebook:</p>
-                                                            <p class="text-gray-600 text-xs ">Carl Gabrielle</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            
-                                            <a href="https://www.linkedin.com/in/carl-gabrielle-61665424a/" target="_blank" class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
-                                                <div class="px-6 py-4">
-                                                    <div class="flex items-center">
-                                                        <i class="fab fa-linkedin text-3xl text-blue-500 mr-4 "></i>
-                                                        <div class="text-sm">
-                                                            <p class="text-gray-900 leading-none">Connect on LinkedIn:</p>
-                                                            <p class="text-gray-600 text-xs">Carl Gabrielle</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="https://github.com/Carl-Gabrielle" target="_blank" class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
-                                                <div class="px-6 py-4">
-                                                    <div class="flex items-center">
-                                                        <i class="fab fa-github text-3xl text-black  mr-4"></i>
-                                                        <div class="text-sm">
-                                                            <p class="text-gray-900 leading-none">My Github Account:</p>
-                                                            <p class="text-gray-600 text-xs">Carl-Gabrielle</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="min-h-[80px] w-full mt-5 flex flex-col ">
-                                        <hr class="border-gray-400">
-                                        <div class="flex  flex-col  sm:flex-row items-center gap-2 justify-between text-gray-600 px-4 py-4">
-                                            <p class="text-sm ">Carl Gabrielle</p>
-                                            <!-- <p class="text-sm">&copy; 2024 Portfolio</p> -->
-                                            <ul class="flex space-x-4 text-sm">
-                                                <li class="hover:underline underline-offset-4 hover:text-gray-500 underline-thick">
-                                                    <a href="">Home</a>
-                                                </li>
-                                                <li class="hover:underline underline-offset-4 hover:text-gray-500 underline-thick">
-                                                    <a href="">About</a>
-                                                </li>
-                                                <li class="hover:underline underline-offset-4 hover:text-gray-500 underline-thick">
-                                                    <a href="">Projects</a>
-                                                </li>
-                                                <li class="hover:underline underline-offset-4 hover:text-gray-500 underline-thick">
-                                                    <a href="">Contact</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                    <script src="script.js"></script>
-                </body>
-                </html>
+          </div>
+          <div
+            class="sm:w-1/2 h-100 py-10 rounded-3xl bg-white flex items-center justify-center container-dark"
+          >
+            <img
+              id="profileImage"
+              src="images/profile.jpeg"
+              alt="Your Image"
+              class="w-1/2 h-3/4 object-cover rounded-3xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2
+      id="about-me"
+      class="text-center mt-10 hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide hover:underline"
+    >
+      About Me
+    </h2>
+    <div class="w-full h-full">
+      <div class="px-6 max-w-6xl mx-auto relative">
+        <div
+          class="flex flex-col sm:flex-row justify-start sm:items-start items-center space-x-4 gap-5 mt-10"
+        >
+          <img
+            id="aboutImage"
+            class="w-52 h-80 filter grayscale hover:grayscale-0 transition duration-300 ease-in-out rounded-md"
+            src="./images/aboutImg.jpg"
+            alt=""
+          />
+          <div id="story" class="text-sm">
+            <h1
+              class="text-gray-800 font-semibold sm:text-start text-center uppercase pt-10"
+            >
+              Get to Know Me:
+            </h1>
+            <p class="text-gray-600 mt-4 leading-relaxed text-justify">
+              My journey into web development began with a curiosity about how
+              websites are built and a desire to bring ideas to life through
+              code.
+            </p>
+            <p class="text-gray-600 mt-4 leading-relaxed text-justify">
+              I have experience in front-end development, working with
+              technologies such as HTML, CSS, JavaScript, and starting to learn
+              frameworks like React. I'm also proficient in using tools like
+              Tailwind CSS to build responsive and visually appealing user
+              interfaces.
+            </p>
+            <p class="text-gray-600 mt-4 leading-relaxed text-justify">
+              When I'm not coding, I enjoy exploring new design trends, reading
+              tech blogs, and continuously learning new skills to enhance my
+              development expertise.
+            </p>
+          </div>
+        </div>
+        <h2
+          class="text-center mt-5 hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide hover:underline"
+        >
+          Education
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 py-10">
+          <div
+            id="psu"
+            class="bg-white container-dark rounded-xl h-32 shadow-lg relative overflow-hidden flex items-center justify-between px-6 py-4"
+          >
+            <div class="flex items-center">
+              <img
+                class="w-16 h-16 mr-4 rounded-full"
+                src="./logo/psuLogo.png"
+                alt="PSU Logo"
+              />
+              <div>
+                <h2 class="text-md font-semibold text-gray-800">
+                  Bachelor of Science in Information Technology
+                </h2>
+                <p class="text-xs text-gray-500">August 2021 - Present</p>
+                <p class="text-xs text-gray-500">
+                  Pangasinan State University - Alaminos City Campus
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            id="acnhs"
+            class="bg-white container-dark rounded-xl h-32 shadow-lg relative overflow-hidden flex items-center justify-between px-6 py-4"
+          >
+            <div class="flex items-center">
+              <img
+                class="w-16 h-16 mr-4 rounded-full"
+                src="./logo/AcnhsLogo.png"
+                alt="Acnhs Logo"
+              />
+              <div>
+                <h2 class="text-md font-semibold text-gray-800">
+                  Science Technology Engineering and Mathematics
+                </h2>
+                <p class="text-xs text-gray-500">June 2019 - 2021</p>
+                <p class="text-xs text-gray-500">
+                  Alaminos City National High School
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2
+          class="text-center mt-10 hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide hover:underline"
+        >
+          Certificates
+        </h2>
+
+        <div
+          id="certificates"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10"
+        >
+          <a href="">
+            <div class="overflow-hidden h-48 relative">
+              <div
+                class="absolute inset-0 flex items-center justify-center py-2"
+              >
+                <img
+                  class="w-64 h-44 object-cover"
+                  src="images/freCode.png"
+                  alt="Freecodecamp Certification"
+                />
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="overflow-hidden h-48 relative">
+              <div
+                class="absolute inset-0 flex items-center justify-center py-2"
+              >
+                <img
+                  class="w-64 h-44 object-cover"
+                  src="images/NccebCert.jpg"
+                  alt="Ncceb Certification"
+                />
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="overflow-hidden h-48 relative">
+              <div
+                class="absolute inset-0 flex items-center justify-center py-2"
+              >
+                <img
+                  class="w-64 h-44 object-cover"
+                  src="images/progQuiz.jpg"
+                  alt="Prog. Quiz Certification"
+                />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="projects" class="w-full h-full mt-16 pb-5">
+      <div
+        class="px-6 max-w-6xl mx-auto pt-1 md:pt-4 bg-Proj"
+        style="
+          background-image: url('images/project_bg.png');
+          background-size: 85%;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
+        <div id="projectTitle">
+          <h1
+            class="font-extrabold text-5xl md:text-7xl md:text-center items-center text-center tracking-widest uppercase leading-none text-gray-800 md:-mt-10 mt-10"
+          >
+            Recent Projects
+          </h1>
+        </div>
+        <div class="relative h-full w-full project-container hidden md:block">
+          <h1
+            id="projectText"
+            class="absolute text-black font-extrabold tracking-wider"
+          >
+            Projects
+          </h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:mt-20 mt-20">
+          <a href="">
+            <div
+              id="proj1"
+              class="divProj relative z-20 container-dark w-full h-72 bg-white mb-10 rounded-tl-3xl rounded-br-3xl"
+            >
+              <div class="absolute top-0 right-0 flex justify-center pb-4">
+                <p class="bg-black px-6 text-white py-1 font-extrabold">
+                  Personal Website
+                </p>
+              </div>
+              <div
+                class="absolute bottom-1/2 left-1/2 transform -translate-x-1/2"
+              >
+                <span class="text-yellow-500">In Progress</span>
+              </div>
+              <!-- <div class="absolute bottom-0  left-0  px-10 flex justify-center pb-3 ">
+                                                <ul class="flex gap-4  ">
+                                                    <li class="  bg-gray-200 px-6 py-1 text-gray-500 font-normal rounded-full">task</li>
+                                                    <li class=" bg-gray-200 px-6 py-1 text-gray-500 font-normal rounded-full">management</li>
+                                                </ul>
+                                            </div> -->
+              <div
+                class="absolute bottom-0 right-0 px-10 flex justify-center pb-4"
+              >
+                <p class="text-black text-2xl font-extrabold">01</p>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div
+              id="proj2"
+              class="divProj relative z-20 container-dark w-full h-72 bg-white mb-10 rounded-tl-3xl rounded-br-3xl"
+            >
+              <div class="absolute top-0 right-0 flex justify-center pb-4">
+                <p
+                  class="bg-black px-6 text-white text-center py-1 font-extrabold"
+                >
+                  BiliNao - E-commerce for Handicrafts
+                </p>
+              </div>
+              <div
+                class="absolute bottom-1/2 left-1/2 transform -translate-x-1/2"
+              >
+                <span class="text-yellow-500">In Progress</span>
+              </div>
+              <div
+                class="absolute bottom-0 right-0 px-10 flex justify-center pb-4"
+              >
+                <p class="text-black text-2xl font-extrabold">02</p>
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://github.com/Carl-Gabrielle/task-management-system.git"
+            target="_blank"
+          >
+            <div
+              id="proj3"
+              class="divProj relative z-20 container-dark w-full h-72 bg-white rounded-tl-3xl rounded-br-3xl"
+            >
+              <div
+                class="absolute w-full h-full transition-transform duration-1000 ease-in-out hover:scale-110"
+                style="
+                  background-image: url('images/task-image.png');
+                  background-size: 75%;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div>
+              <div class="absolute top-0 right-0 flex justify-center pb-4">
+                <p class="bg-black px-6 text-white py-1 font-extrabold">
+                  Task Management System
+                </p>
+              </div>
+              <div
+                class="absolute bottom-0 right-0 px-10 flex justify-center pb-4"
+              >
+                <p class="text-black text-2xl font-extrabold">03</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://hinptourismwebsite.netlify.app/" target="_blank">
+            <div
+              id="proj4"
+              class="divProj relative z-20 container-dark bg-white w-full h-72 rounded-tl-3xl rounded-br-3xl"
+            >
+              <div
+                class="absolute w-full h-full transition-transform duration-1000 ease-in-out hover:scale-125 right-0"
+                style="
+                  background-image: url('images/hi-mockup.png');
+                  background-size: 75%;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div>
+              <div class="absolute top-0 right-0 flex justify-center pb-4">
+                <p class="bg-black px-6 text-white py-1 font-extrabold">
+                  Hundred Islands Tourism Website
+                </p>
+              </div>
+              <div
+                class="absolute bottom-0 right-0 px-10 flex justify-center pb-4"
+              >
+                <p class="text-black text-2xl font-extrabold">04</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full h-full">
+      <div class="px-6 max-w-6xl mx-auto pt-1 md:pt-1">
+        <div id="tech-stack" class="text-center md:text-center">
+          <h2
+            class="flex justify-center items-center mt-24 hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide hover:underline"
+          >
+            Tech Stack
+          </h2>
+          <p
+            class="text-1xl text-center text-gray-600 flex justify-center pt-3"
+          >
+            An overview of the tech stack I use to create web applications
+          </p>
+        </div>
+        <div class="flex justify-center sm:justify-start m-5 pt-3">
+          <ul id="front" class="bg-black p-2 px-5 rounded-3xl">
+            <li class="ml-2 text-white font-normal">Frontend Development</li>
+          </ul>
+        </div>
+        <div
+          id="frontTools"
+          class="flex flex-col sm:grid sm:grid-cols-3 sm:gap-2 justify-center md:justify-start"
+        >
+          <ul
+            class="flex gap-2 flex-wrap justify-center md:justify-start sm:col-span-3"
+          >
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src="./logo/htmlLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="HTML Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">HTML5</p>
+              </div>
+            </li>
+
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src=" ./logo/cssLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="CSS Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">CSS</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg px-2 w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src=" ./logo/jsLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="JS Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Javascript</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg px-2 w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src=" ./logo/reactLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="React JS Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">React JS</p>
+              </div>
+            </li>
+          </ul>
+          <ul
+            class="flex gap-2 flex-wrap justify-center md:justify-start sm:col-span-3"
+          >
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src=" ./logo/bootstrapLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="Bootstrap Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Bootstrap</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src="./logo/tailwindLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="TailwindCss Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Tailwind</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src="./logo/jqueryLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="JqueryLogo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Jquery</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src="./logo/gsapLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="Gsap Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Gsap</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex justify-center sm:justify-end m-5 pt-3">
+          <ul id="back" class="bg-black p-2 px-5 rounded-3xl">
+            <li class="ml-2 text-white font-normal">Backend Development</li>
+          </ul>
+        </div>
+        <div id="backTools" class="flex justify-end md:flex-row flex-col">
+          <ul class="flex gap-2 flex-wrap md:flex-nowrap justify-center">
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src="./logo/phpLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="Php Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Php</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src=" ./logo/laravelLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="Laravel Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Laravel</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="flex justify-center sm:justify-start m-5 pt-3">
+          <ul id="tools" class="bg-black p-2 px-5 rounded-3xl">
+            <li class="ml-2 text-white font-normal">Tools & Platforms</li>
+          </ul>
+        </div>
+        <div id="platTools" class="flex justify-start md:flex-row flex-col">
+          <ul class="flex gap-2 flex-wrap md:flex-nowrap justify-center">
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src=" ./logo/gitLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="Git Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Git</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <i class="fab fa-github github text-2xl pr-2 text-gray-700"></i>
+                <p class="text-slate-900 font-medium text-xs">Github</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src=" ./logo/netlifyLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="Netlify Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Netlify</p>
+              </div>
+            </li>
+            <li
+              class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+            >
+              <div class="flex flex-row items-center">
+                <img
+                  src=" ./logo/vsLogo.png"
+                  class="w-8 h-8 mr-2"
+                  alt="Visual studio Logo"
+                />
+                <p class="text-slate-900 font-medium text-xs">Visual Studio</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <h2
+          id="contacts"
+          class="text-center mt-10 hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide hover:underline"
+        >
+          Contact
+        </h2>
+        <div class="flex flex-col lg:flex-row items-center">
+          <div
+            id="quoteDiv"
+            class="order-1 lg:order-none w-full lg:w-1/2 px-4 lg:px-0"
+          >
+            <h1 class="text-2xl lg:text-3xl font-bold mb-4 text-gray-900">
+              Bringing Your Vision to Life. Let's Connect!
+            </h1>
+          </div>
+          <div
+            id="contactDiv"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 w-full lg:w-1/2"
+          >
+            <a
+              href="mailto:orfinadacarlgabrielle@gmail.com"
+              class="container-dark bg-white block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg"
+            >
+              <div class="px-6 py-4">
+                <div class="flex items-center">
+                  <img
+                    class="w-10 h-10 rounded-full mr-4"
+                    src="./logo/emailLogo.png"
+                    alt="Email Logo"
+                  />
+                  <div class="text-sm">
+                    <p class="text-gray-900 leading-none">Send me an email:</p>
+                    <p class="text-gray-600 text-xs">
+                      orfinadacarlgabrielle@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white"
+            >
+              <div class="px-6 py-4">
+                <div class="flex items-center">
+                  <i class="fab fa-facebook text-3xl text-blue-500 mr-4"></i>
+                  <div>
+                    <p class="text-gray-900 leading-none text-sm">
+                      Connect on Facebook:
+                    </p>
+                    <p class="text-gray-600 text-xs">Carl Gabrielle</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/carl-gabrielle-61665424a/"
+              target="_blank"
+              class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white"
+            >
+              <div class="px-6 py-4">
+                <div class="flex items-center">
+                  <i class="fab fa-linkedin text-3xl text-blue-500 mr-4"></i>
+                  <div class="text-sm">
+                    <p class="text-gray-900 leading-none">
+                      Connect on LinkedIn:
+                    </p>
+                    <p class="text-gray-600 text-xs">Carl Gabrielle</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://github.com/Carl-Gabrielle"
+              target="_blank"
+              class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white"
+            >
+              <div class="px-6 py-4">
+                <div class="flex items-center">
+                  <i class="fab fa-github text-3xl text-black mr-4"></i>
+                  <div class="text-sm">
+                    <p class="text-gray-900 leading-none">My Github Account:</p>
+                    <p class="text-gray-600 text-xs">Carl-Gabrielle</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="min-h-[80px] w-full mt-5 flex flex-col">
+          <hr class="border-gray-400" />
+          <div
+            class="flex flex-col sm:flex-row items-center gap-2 justify-between text-gray-600 px-4 py-4"
+          >
+            <p class="text-sm">Carl Gabrielle</p>
+            <!-- <p class="text-sm">&copy; 2024 Portfolio</p> -->
+            <ul class="flex space-x-4 text-sm">
+              <li
+                class="hover:underline underline-offset-4 hover:text-gray-500 underline-thick"
+              >
+                <a href="">Home</a>
+              </li>
+              <li
+                class="hover:underline underline-offset-4 hover:text-gray-500 underline-thick"
+              >
+                <a href="">About</a>
+              </li>
+              <li
+                class="hover:underline underline-offset-4 hover:text-gray-500 underline-thick"
+              >
+                <a href="">Projects</a>
+              </li>
+              <li
+                class="hover:underline underline-offset-4 hover:text-gray-500 underline-thick"
+              >
+                <a href="">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

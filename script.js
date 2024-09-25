@@ -185,7 +185,6 @@
                 animateProject("#proj4", 40);
                 animateProject("#quoteDiv", -40);
                 animateProject("#contactDiv", 40);
-                
                 gsap.from("#btnView", {
                     scrollTrigger: {
                         trigger: "#btnView",
@@ -198,7 +197,6 @@
                     delay: 0.5,
                     ease: "power1.out" 
                 });
-                
                 gsap.from("#front", {
                     scrollTrigger: {
                         trigger: "#front",
