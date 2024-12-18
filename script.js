@@ -29,6 +29,14 @@
                 ease: "power1.out", 
                 stagger: 0.2
                 });
+                gsap.from(".experienceShowcase", {
+                    opacity: 0,
+                    y: 20,
+                    duration: 1,
+                    delay: 0.5,
+                    ease: "power1.out", 
+                    stagger: 0.2
+                    });
                 gsap.from("#name", {
                     opacity: 0,
                     y: 20,
@@ -36,7 +44,6 @@
                     delay: 0.5,
                     ease: "power1.out"
                 });
-
                 gsap.from("#description", {
                     opacity: 0,
                     y: 20,
