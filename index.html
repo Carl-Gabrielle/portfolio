@@ -36,11 +36,11 @@
     <body class="lg:overflow-show overflow-y-scroll">
       <div class="w-full container-nav container-dark h-20 fixed z-30 border-b">
         <div
-          class="flex justify-between items-center h-full max-w-6xl px-6 mx-auto"
+          class="flex justify-between items-center h-full max-w-6xl xl:max-w-7xl px-6 mx-auto"
         >
           <a href="index.html">
             <p
-              class="antialised font-semibold font-montserrat text-xs tracking-wide rounded-md text-white bg-black px-5 py-1"
+              class="antialised font-semibold font-montserrat text-xs tracking-wide rounded-2xl text-white bg-black px-5 py-1"
               id="name"
             >
               Carl Gabrielle <br />
@@ -301,7 +301,7 @@
         </div>
       </div>
       <div id="home" class="w-full h-full">
-        <div class="px-6 max-w-6xl py-10 mx-auto md:py-11 relative">
+        <div class="px-6 max-w-6xl lg:max-w-6xl xl:max-w-7xl py-10 mx-auto md:py-11 relative">
           <div
             class="flex flex-col-reverse sm:flex-row justify-between items-center gap-8 mt-16"
           >
@@ -326,7 +326,7 @@
                 I'm a 22-year-old 👋, currently in my fourth year as an I.T.
                 student with a strong passion for becoming
                 <span
-                  class="font-bold container-dark  text-field text-white bg-black px-3 rounded-lg py-1"
+                  class="font-bold container-dark text-nowrap  text-field text-white bg-black px-3 rounded-lg py-1"
                   >a proficient web developer</span
                 >. I aim to keep learning and becoming more knowledgeable in the tech sector. I strongly desire to grow in my chosen field and always want to adopt the newest trends and technological breakthroughs 🚀.
               </p>
@@ -400,7 +400,7 @@
         About Me
       </h2>
       <div class="w-full h-full">
-        <div class="px-6 max-w-6xl mx-auto relative">
+        <div class="px-6  max-w-6xl xl:max-w-7xl mx-auto relative">
           <div
             class="flex flex-col sm:flex-row justify-start sm:items-start items-center space-x-4 gap-5 mt-10"
           >
@@ -537,25 +537,25 @@
       </div>
       <div id="projects" class="w-full h-full mt-16 pb-5">
         <div
-          class="px-6 max-w-6xl mx-auto pt-1 md:pt-4 bg-Proj"
+          class="px-6  max-w-6xl xl:max-w-7xl mx-auto pt-1 md:pt-4 bg-Proj z-10"
           style="
             background-image: url('images/project_bg.png');
-            background-size: 85%;
+            background-size: 80%;
             background-position: center;
             background-repeat: no-repeat;
           "
         >
           <div id="projectTitle">
             <h1
-              class="font-extrabold text-5xl md:text-7xl md:text-center items-center text-center tracking-widest uppercase leading-none text-gray-800 md:-mt-10 mt-10"
+            class="font-extrabold text-5xl md:text-7xl md:text-center items-center text-center tracking-widest uppercase leading-none text-gray-800 mb-4  md:-mt-10 mt-10"
             >
               Recent Projects
             </h1>
           </div>
-          <div class="relative h-full w-full project-container hidden md:block">
+          <div class="relative h-full w-full project-container hidden md:block ">
             <h1
               id="projectText"
-              class="absolute text-black font-extrabold tracking-wider"
+              class="absolute text-black font-extrabold tracking-wider -mt-10 z-20"
             >
               Projects
             </h1>
@@ -619,7 +619,7 @@
                   class="absolute w-full h-full transition-transform duration-1000 ease-in-out hover:scale-110"
                   style="
                     background-image: url('images/task-image.png');
-                    background-size: 75%;
+                    background-size: 70%;
                     background-position: center;
                     background-repeat: no-repeat;
                   "
@@ -642,10 +642,10 @@
                 class="divProj relative z-20 container-dark bg-white w-full h-72  shadow-md rounded-tl-3xl rounded-br-3xl"
               >
                 <div
-                  class="absolute w-full h-full transition-transform duration-1000 ease-in-out hover:scale-125 right-0"
+                  class="absolute w-full h-full transition-transform duration-1000 ease-in-out hover:scale-110 right-0"
                   style="
                     background-image: url('images/hi-mockup.png');
-                    background-size: 75%;
+                    background-size: 70%;
                     background-position: center;
                     background-repeat: no-repeat;
                   "
@@ -666,7 +666,7 @@
         </div>
       </div>
       <div class="w-full h-full">
-        <div class="px-6 max-w-6xl mx-auto pt-1 md:pt-1">
+        <div class="px-6 pt-1 md:pt-1">
           <div id="tech-stack" class="text-center md:text-center">
             <h2
               class="flex justify-center items-center mt-24 hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out text-gray-800 font-extrabold text-4xl sm:text-5xl tracking-wide hover:underline"
@@ -686,14 +686,11 @@
           </div>
           <div
             id="frontTools"
-            class="flex flex-col sm:grid sm:grid-cols-3 sm:gap-2 justify-center md:justify-start"
+            class="flex flex-col sm:grid sm:grid-cols-3 sm:gap-1 justify-center md:justify-start"
           >
             <ul
-              class="flex gap-2 flex-wrap justify-center md:justify-start sm:col-span-3"
-            >
-              <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
-              >
+              class="flex gap-1 flex-wrap justify-center md:justify-start sm:col-span-3 ">
+              <li class="shadow-md border border-gray-300 rounded-2xl  w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out">
                 <div class="flex flex-row items-center">
                   <img
                     src="./logo/htmlLogo.png"
@@ -704,8 +701,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
-              >
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out">
                 <div class="flex flex-row items-center">
                   <img
                     src=" ./logo/cssLogo.png"
@@ -716,7 +712,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg px-2 w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl px-2 w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -728,7 +724,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg px-2 w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300  rounded-2xl px-2 w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -741,10 +737,10 @@
               </li>
             </ul>
             <ul
-              class="flex gap-2 flex-wrap justify-center md:justify-start sm:col-span-3"
+              class="flex gap-1 flex-wrap justify-center md:justify-start sm:col-span-3"
             >
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -756,7 +752,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -768,7 +764,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -780,7 +776,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -799,9 +795,9 @@
             </ul>
           </div>
           <div id="backTools" class="flex justify-end md:flex-row flex-col">
-            <ul class="flex gap-2 flex-wrap md:flex-nowrap justify-center">
+            <ul class="flex gap-1 flex-wrap md:flex-nowrap justify-center">
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -813,7 +809,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -832,9 +828,9 @@
             </ul>
           </div>
           <div id="platTools" class="flex justify-start md:flex-row flex-col">
-            <ul class="flex gap-2 flex-wrap md:flex-nowrap justify-center">
+            <ul class="flex gap-1 flex-wrap md:flex-nowrap justify-center">
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -846,7 +842,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <i class="fab fa-github github text-2xl pr-2 text-gray-700"></i>
@@ -854,7 +850,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -866,7 +862,7 @@
                 </div>
               </li>
               <li
-                class="shadow-md border border-gray-300 rounded-lg w-32 m-3 h-16 flex justify-center items-center"
+                class="shadow-md border border-gray-300 rounded-2xl w-32 m-3 h-11 flex justify-center items-center hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="flex flex-row items-center">
                   <img
@@ -944,7 +940,7 @@
             >
               <a
                 href="mailto:orfinadacarlgabrielle@gmail.com"
-                class="container-dark bg-white block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg"
+                class="container-dark bg-white block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="px-6 py-4">
                   <div class="flex items-center">
@@ -965,7 +961,7 @@
               <a
                 href="#"
                 target="_blank"
-                class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white"
+                class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="px-6 py-4">
                   <div class="flex items-center">
@@ -982,7 +978,7 @@
               <a
                 href="https://www.linkedin.com/in/carl-gabrielle-61665424a/"
                 target="_blank"
-                class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white"
+                class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="px-6 py-4">
                   <div class="flex items-center">
@@ -999,7 +995,7 @@
               <a
                 href="https://github.com/Carl-Gabrielle"
                 target="_blank"
-                class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white"
+                class="container-dark block w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg bg-white hover:-translate-y-1 hover:scale-100 transition duration-300 ease-in-out"
               >
                 <div class="px-6 py-4">
                   <div class="flex items-center">
